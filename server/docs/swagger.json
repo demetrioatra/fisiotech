@@ -1,0 +1,693 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Fisiotech",
+    "description": "REST API desenvolvida com MongoDB, NodeJs, JavaScript, Mongoose, Express, dotenv, JWT\n[github.com/demetrioatra/fisiotech](https://github.com/demetrioatra/fisiotech)",
+    "version": "1.8.1"
+  },
+  "host": "localhost:3500",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "/",
+      "description": "Desafios propostos pelo case"
+    },
+    {
+      "name": "/pacientes",
+      "description": "Funções relativas aos pacientes da clínica"
+    },
+    {
+      "name": "/planos",
+      "description": "Funções relativas aos planos dos pacientes"
+    },
+    {
+      "name": "/origens",
+      "description": "Funções relativas às origens"
+    },
+    {
+      "name": "/patologias",
+      "description": "Funções relativas às patologias"
+    },
+    {
+      "name": "/usuarios",
+      "description": "Funções relativas aos usuários da clínica"
+    },
+    {
+      "name": "/auth",
+      "description": "Funções relativas aos processos de autenticação de token"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    },
+    "fisiotech_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "http://localhost:3500/auth",
+      "flow": "implicit"
+    }
+  },
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/pacientes": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/pacientes/{paciente_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "paciente_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "paciente_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "paciente_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/planos": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/planos/{plano_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "plano_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "plano_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "plano_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/origens": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/origens/{origem_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "origem_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "origem_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "origem_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/patologias": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/patologias/{patologia_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "patologia_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "patologia_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "patologia_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/usuarios": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/usuarios/{usuario_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "usuario_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "usuario_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "usuario_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/auth": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Pacientes": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string",
+          "example": "Marina"
+        },
+        "telefone": {
+          "type": "string",
+          "example": "11 99999-2346"
+        },
+        "idade": {
+          "type": "string",
+          "example": "29"
+        },
+        "email": {
+          "type": "string",
+          "example": "marina@gmail.com"
+        },
+        "origemId": {
+          "type": "string",
+          "example": "62c35da7c93782ae93bf361f"
+        }
+      },
+      "xml": {
+        "name": "Pacientes"
+      }
+    },
+    "Planos": {
+      "type": "object",
+      "properties": {
+        "pacienteId": {
+          "type": "string",
+          "example": "62b090279a71c675df1b7f19"
+        },
+        "ficha": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "patologiaId": {
+                "type": "string",
+                "example": "62c35f97c93782ae93bf3632"
+              },
+              "atencao": {
+                "type": "string",
+                "example": "media"
+              },
+              "qtd_sessoes": {
+                "type": "string",
+                "example": "10"
+              },
+              "vl_sessao": {
+                "type": "string",
+                "example": "124.9"
+              },
+              "evolucao": {
+                "type": "string",
+                "example": "-"
+              },
+              "pagamento": {
+                "type": "string",
+                "example": "499.99"
+              },
+              "sessoes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string",
+                      "example": "2023-01-05"
+                    },
+                    "hora": {
+                      "type": "string",
+                      "example": "10:00h"
+                    },
+                    "fisioterapeuta": {
+                      "type": "string",
+                      "example": "Renato"
+                    },
+                    "pago": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "compareceu": {
+                      "type": "boolean",
+                      "example": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "Planos"
+      }
+    },
+    "Origens": {
+      "type": "object",
+      "properties": {
+        "descricao": {
+          "type": "string",
+          "example": "Indicação"
+        }
+      },
+      "xml": {
+        "name": "Origens"
+      }
+    },
+    "Patologias": {
+      "type": "object",
+      "properties": {
+        "descricao": {
+          "type": "string",
+          "example": "Fraturas"
+        }
+      },
+      "xml": {
+        "name": "Patologias"
+      }
+    },
+    "Usuarios": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "fisio1@fisiotech.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "iloveortopedia"
+        }
+      },
+      "xml": {
+        "name": "Usuarios"
+      }
+    },
+    "Auth": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "fisio1@fisiotech.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "iloveortopedia"
+        }
+      },
+      "xml": {
+        "name": "Auth"
+      }
+    }
+  }
+}
