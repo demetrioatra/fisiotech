@@ -1,12 +1,11 @@
 import { Avatar } from '@mui/material'
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from '@mui/icons-material/Search'
+import './index.css'
 
 function Header() {
     return (
-        <header className="header">
+        <header className = "header">
             <SearchIcon />
-            <NotificationsIcon />
             <Avatar />
         </header>
     )
