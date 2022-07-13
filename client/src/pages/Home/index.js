@@ -22,7 +22,7 @@ function Home() {
             {
                 pacientes.map((p) => {
                     return (
-                        <ul key = { p.id }>
+                        <ul key = { p._id }>
                             <li>{ p.nome } - { p.telefone } - { p.idade } - { p.email }</li>
                         </ul>
                     )
