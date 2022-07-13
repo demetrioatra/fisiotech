@@ -22,8 +22,8 @@ function Home() {
 
     return (
         <>
-            <SideBar />
             <Header />
+            <SideBar />
             <Chart />
         </>
     )

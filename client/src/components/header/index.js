@@ -1,7 +1,13 @@
+import { Avatar } from '@mui/material'
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SearchIcon from '@mui/icons-material/Search';
+
 function Header() {
     return (
-        <header className="">
-            <h1>Header</h1>
+        <header className="header">
+            <SearchIcon />
+            <NotificationsIcon />
+            <Avatar />
         </header>
     )
 }
