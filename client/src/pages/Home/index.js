@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import SideBar from '../../components/sidebar'
+import Header from '../../components/header'
+import Chart from '../../components/chart'
 import './index.css'
 
 function Home() {
@@ -18,17 +21,11 @@ function Home() {
     }, [])
 
     return (
-        <div className = "container">
-            {
-                pacientes.map((p) => {
-                    return (
-                        <ul key = { p._id }>
-                            <li>{ p.nome } - { p.telefone } - { p.idade } - { p.email }</li>
-                        </ul>
-                    )
-                })
-            }
-        </div>
+        <>
+            <SideBar />
+            <Header />
+            <Chart />
+        </>
     )
 }
 
