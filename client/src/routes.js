@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Plano from './pages/Plano'
+import SignIn from './pages/SignIn'
 import Error from './pages/Error'
 
 function RoutesApp () {
@@ -14,6 +15,7 @@ function RoutesApp () {
                 <Route path = '/origem/:id' />
                 <Route path = '/patologia/:id' />
                 <Route path = '/usuario/:id' />
+                <Route exact path = '/signin'  component={ SignIn}/>
                 <Route path = '*' element = { <Error/> } />
             </Switch>
         </BrowserRouter>
