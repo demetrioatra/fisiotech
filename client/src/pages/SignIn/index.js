@@ -2,7 +2,7 @@ import { Container, Button, TextField, Grid } from '@mui/material'
 
 function SignIn() {
     return (
-        <Container className='container' maxWidth='lg'>
+        <Container className='container'>
             <Grid
             container
             spacing={2}
