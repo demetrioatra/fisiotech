@@ -3,6 +3,7 @@ import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
 import Chart from '../../components/chart'
 import './index.css'
+import { Grid } from '@mui/material'
 
 function Home() {
     const [pacientes, setPaciente] = useState([])
@@ -21,13 +22,11 @@ function Home() {
     }, [])
 
     return (
-        <div>
+        <Grid container>
             <Header />
-            <div className='page'>
-                <SideBar />
-                <Chart />
-            </div>
-        </div>
+            <SideBar />
+            <Grid item><Chart /></Grid>
+        </Grid>
     )
 }
 

@@ -23,6 +23,7 @@ export default function PermanentDrawerLeft() {
         <Box className='drawer' sx={{ display: 'flex' }}>
             <CssBaseline />
             <Drawer
+                className='drawer'
                 sx={{
                 width: drawerWidth,
                 flexShrink: 0,
