@@ -7,7 +7,7 @@ import { Box,
     ListItemText,
     ListItemIcon
 } from '@mui/material';
-
+import { Link } from 'react-router-dom'
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import SpaIcon from '@mui/icons-material/Spa';
@@ -18,7 +18,7 @@ const drawerWidth = 280;
 export default function PermanentDrawerLeft() {
 
     function redirect() {
-        alert('clicou')
+        
     }
 
     return (
@@ -26,7 +26,7 @@ export default function PermanentDrawerLeft() {
             <CssBaseline />
             <Drawer
                 className='drawer'
-                sx={{
+                sx = {{
                 width: drawerWidth,
                 flexShrink: 0,
                 '& .MuiDrawer-paper': {
@@ -41,7 +41,7 @@ export default function PermanentDrawerLeft() {
                 <List>
                 {['Home', 'Pacientes', 'Planos', 'Usuários', 'Login', 'Not Found'].map((text, index) => (
                     <ListItem key = { text } disablePadding>
-                        <ListItemButton onClick = { redirect }>
+                        <ListItemButton>
                             <ListItemIcon>
                                 { index % 2 === 0 ? <InboxIcon /> : <MailIcon /> }
                             </ListItemIcon>

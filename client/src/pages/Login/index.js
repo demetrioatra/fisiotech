@@ -3,8 +3,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import SpaIcon from '@mui/icons-material/Spa';
 import './index.css'
 
-export default function SignIn() {
-    const paperStyle = {padding: 20, height: '68vh', width: 380, margin: '0 auto'}
+export default function Login() {
+    const paperStyle = { padding: 20, height: '68vh', width: 380, margin: '0 auto' }
 
     return (
         <Grid align = "center">
@@ -17,17 +17,18 @@ export default function SignIn() {
                 <h2>Sign in to continue</h2>
                 <Grid container spacing = { 2 } direction = "column" style = { { marginTop: 20 } }>
                     <Grid item>
-                        <TextField label="Email" fullWidth required/>
+                        <TextField label = "Email" fullWidth required/>
                     </Grid>
                     <Grid item>
-                        <TextField label="Password" fullWidth required/>
+                        <TextField label = "Password" fullWidth required/>
                     </Grid>
                     <Grid item>
-                        <Button variant='contained' fullWidth>Sign In</Button>
+                        <Button variant = 'contained' href = 'http://localhost:3000/home' fullWidth>Sign In</Button>
                     </Grid>
                     <Grid item><p>OR</p></Grid>
                     <Grid item>
                         <Button
+                        href = 'http://localhost:3500/auth/google'
                         variant = 'outlined'
                         startIcon = { <GoogleIcon /> }
                         fullWidth
