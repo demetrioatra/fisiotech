@@ -10,6 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import './index.css'
+import { Divider } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -29,7 +30,7 @@ export default function PermanentDrawerLeft() {
                 variant="permanent"
                 anchor="left"
             >
-                <Toolbar />
+                <h1>Fisiotech</h1>
                 <List>
                 {['Dashboard', 'Pacientes', 'Usuários', 'Login', 'Register', 'Not Found'].map((text, index) => (
                     <ListItem key={text} disablePadding>
