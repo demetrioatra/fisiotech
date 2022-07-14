@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
 import Chart from '../../components/chart'
-import './index.css'
 import { Grid } from '@mui/material'
+import './index.css'
 
-function Home() {
+export default function Home() {
     const [pacientes, setPaciente] = useState([])
 
     useEffect(() => {
@@ -29,5 +29,3 @@ function Home() {
         </Grid>
     )
 }
-
-export default Home

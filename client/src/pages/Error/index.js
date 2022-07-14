@@ -1,11 +1,8 @@
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import './index.css'
 
-function Error() {
+export default function Error() {
     return (
-        <>
-            <h1>Não conseguimos encontrar a página que você está procurando...</h1>
-        </>
+        <h1><ReportProblemIcon fontSize='lg' /> | Esta página não pode ser encontrada.</h1>
     )
 }
-
-export default Error

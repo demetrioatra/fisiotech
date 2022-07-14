@@ -8,15 +8,10 @@ function RoutesApp () {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path = '/' component = { Home } />
-                <Route path = '/paciente/:id' />
+                <Route exact path = '/home' component = { Home } />
                 <Route exact path = '/plano' component = { Plano } />
-                <Route path = '/plano/:id' />
-                <Route path = '/origem/:id' />
-                <Route path = '/patologia/:id' />
-                <Route path = '/usuario/:id' />
-                <Route exact path = '/signin'  component={ SignIn}/>
-                <Route path = '*' element = { <Error/> } />
+                <Route exact path = '/login'  component = { SignIn } />
+                <Route exact path = '*' component = { Error } />
             </Switch>
         </BrowserRouter>
     )

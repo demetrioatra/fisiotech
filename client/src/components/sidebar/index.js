@@ -7,8 +7,10 @@ import { Box,
     ListItemText,
     ListItemIcon
 } from '@mui/material';
+
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import SpaIcon from '@mui/icons-material/Spa';
 import './index.css'
 
 const drawerWidth = 280;
@@ -35,9 +37,9 @@ export default function PermanentDrawerLeft() {
                 variant="permanent"
                 anchor="left"
             >
-                <h1>Fisiotech</h1>
+                <h1><SpaIcon className='icon' fontSize='lg' /> Fisiotech</h1>
                 <List>
-                {['Dashboard', 'Pacientes', 'Planos', 'Usuários', 'Login', 'Not Found'].map((text, index) => (
+                {['Home', 'Pacientes', 'Planos', 'Usuários', 'Login', 'Not Found'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton onClick={redirect}>
                             <ListItemIcon>
