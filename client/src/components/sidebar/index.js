@@ -8,10 +8,15 @@ import { Box,
     ListItemIcon
 } from '@mui/material';
 
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import MailIcon from '@mui/icons-material/Mail';
 import SpaIcon from '@mui/icons-material/Spa';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import FolderCopyIcon from '@mui/icons-material/FolderCopy';
+import LoginIcon from '@mui/icons-material/Login';
 import './index.css'
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 280;
 
@@ -43,7 +48,12 @@ export default function PermanentDrawerLeft() {
                     <ListItem key={text} disablePadding>
                         <ListItemButton onClick={redirect}>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                {index === 0 && <SpaIcon/>}
+                                {index === 1 && <AccountCircleIcon/>}
+                                {index === 2 && <FolderCopyIcon/>}
+                                {index === 3 && <AccountCircleIcon/>}
+                                {index === 4 && <LoginIcon/>}
+                                {index === 5 && <ReportProblemIcon/>}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
