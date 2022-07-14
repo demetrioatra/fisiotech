@@ -64,5 +64,29 @@ const AuthController = {
     }
 }
 
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
+
+const GOOGLE_CLIENT_ID = '269575950827-atf6us7uqb48t0ke619aqpbslt0d2u55.apps.googleusercontent.com';
+const GOOGLE_CLIENT_SECRET = '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';
+
+passport.use(new GoogleStrategy({
+clientID: GOOGLE_CLIENT_ID,
+clientSecret: GOOGLE_CLIENT_SECRET,
+callbackURL: "http://localhost:3500/google/callback",
+passReqToCallback: true,
+},
+function(request, accessToken, refreshToken, profile, done) {
+return done(null, profile);
+}));
+
+passport.serializeUser(function(user, done) {
+done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+done(null, user);
+});
+
 // Export do controlador de autenticação
 module.exports = AuthController

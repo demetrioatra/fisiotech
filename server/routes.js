@@ -13,6 +13,15 @@ const routes = Router()
 // Rota para desafios
 routes.get('/', HomeController.countOrigins)
 
+//Google Authenticate Oauth2
+require('dotenv').config()
+const dotenv = require('dotenv');
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+require('./controllers/AuthController');
+const app = express();
+
 // Rotas para paciente
 routes.post('/pacientes', PacienteController.createPaciente)
 routes.get('/pacientes', PacienteController.getPacientes)
@@ -20,9 +29,67 @@ routes.get('/pacientes/:paciente_id', PacienteController.getPacienteById)
 routes.put('/pacientes/:paciente_id', PacienteController.updatePaciente)
 routes.delete('/pacientes/:paciente_id', PacienteController.deletePaciente)
 
+function isLoggedIn(req, res, next) {
+    req.user ? next() : res.sendStatus(401);
+  }
+  
+  routes.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
+  routes.use(passport.initialize());
+  routes.use(passport.session());
+  
+  routes.get('/google', (req, res) => {
+    res.send('<a href="/auth/google">Authenticate with Google</a>');
+  });
+  
+  routes.get('/auth/google',
+    passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+  ));
+  
+  routes.get('/google/callback',
+    passport.authenticate( 'google', {
+      successRedirect: '/pacientes',
+      failureRedirect: '/auth/google/failure'
+    })
+  );
+  
+  routes.get('/protected', isLoggedIn, (req, res) => {
+    res.send(`Hello ${req.user.displayName}`);
+  });
+  
+  routes.get('/logout', (req, res) => {
+    req.logout();
+    req.session.destroy();
+    res.send('Goodbye!');
+  });
+
+// routes.get('/logout', (req, res, next) => {
+//     req.logout(function (err) {
+//         req.session.destroy()
+//         res.send('Goodbye!')
+//       if (err) {
+//         return next(err);
+//       }
+//       })
+//       });
+
+
+// async logout(req, res) {
+//     return req.logout(function (err) {
+//         req.session.destroy()
+//         res.send('Goodbye!')
+//       if (err) {
+//         return next(err)
+//       }
+//     })
+
+  
+  routes.get('/auth/google/failure', (req, res) => {
+    res.send('Failed to authenticate..');
+  });
+
 // Rotas para plano
 routes.post('/planos', PlanoController.createPlano)
-routes.get('/planos', PlanoController.getPlanos)
+routes.get('/planos',isLoggedIn, PlanoController.getPlanos)
 routes.get('/planos/:plano_id', PlanoController.getPlanoById)
 routes.put('/planos/:plano_id', PlanoController.updatePlano)
 routes.delete('/planos/:plano_id', PlanoController.deletePlano)
