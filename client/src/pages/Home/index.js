@@ -21,11 +21,13 @@ function Home() {
     }, [])
 
     return (
-        <>
+        <div>
             <Header />
-            <SideBar />
-            <Chart />
-        </>
+            <div className='page'>
+                <SideBar />
+                <Chart />
+            </div>
+        </div>
     )
 }
 

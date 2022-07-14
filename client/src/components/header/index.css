@@ -1,9 +1,17 @@
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 94px;
-    border: 1px solid;
     position: absolute fixed;
     background-color: #EFEFEF transparent;
+}
+
+header svg {
+    margin-left: 51px;
+}
+
+.avatar {
+    margin-right: 55px;
 }
