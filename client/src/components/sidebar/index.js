@@ -22,7 +22,7 @@ export default function PermanentDrawerLeft() {
     }
 
     return (
-        <Box className='drawer' sx={{ display: 'flex' }}>
+        <Box className = 'drawer' sx = { { display: 'flex' } }>
             <CssBaseline />
             <Drawer
                 className='drawer'
@@ -37,15 +37,15 @@ export default function PermanentDrawerLeft() {
                 variant="permanent"
                 anchor="left"
             >
-                <h1><SpaIcon className='icon' fontSize='lg' /> Fisiotech</h1>
+                <h1><SpaIcon className = 'icon' fontSize = 'lg' /> Fisiotech</h1>
                 <List>
                 {['Home', 'Pacientes', 'Planos', 'Usuários', 'Login', 'Not Found'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton onClick={redirect}>
+                    <ListItem key = { text } disablePadding>
+                        <ListItemButton onClick = { redirect }>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                { index % 2 === 0 ? <InboxIcon /> : <MailIcon /> }
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary = { text } />
                         </ListItemButton>
                     </ListItem>
                 ))}
