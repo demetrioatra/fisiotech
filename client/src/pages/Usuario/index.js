@@ -6,11 +6,11 @@ import DataGrid from '../../components/table/DataGrid';
 export default function Usuario() {
     return (
         <>
-        <Header />
-        <SideBar />
-        <Grid container>
-            <DataGrid />
-        </Grid>
+            <Header />
+            <SideBar />
+            <Grid container>
+                <DataGrid />
+            </Grid>
         </>
     )
 }
