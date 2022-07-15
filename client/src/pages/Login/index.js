@@ -9,7 +9,7 @@ export default function Login() {
 
     return (
         <Grid align = "center">
-            <Grid>
+            <Grid item>
                 <h1 className = 'logo'>
                     <SpaIcon fontSize = 'lg' className = 'icon' /> Fisiotech
                 </h1>
