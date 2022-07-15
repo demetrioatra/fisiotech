@@ -3,8 +3,8 @@ import { DataGrid } from '@mui/x-data-grid'
 
 const columns = [
   { field: 'id', headerName: 'ID' },
-  { field: 'nome', headerName: 'Nome', width: 300 },
-  { field: 'telefone', headerName: 'Telefone', width: 600 }
+  { field: 'title', headerName: 'Nome', width: 300 },
+  { field: 'body', headerName: 'Telefone', width: 600 }
 ]
 
 const DataGridTeste = () => {
@@ -12,7 +12,7 @@ const DataGridTeste = () => {
   const [tableData, setTableData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3500/pacientes")
+    fetch("https://jsonplaceholder.typicode.com/posts")
       .then((data) => data.json())
       .then((data) => setTableData(data))
 
