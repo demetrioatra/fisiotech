@@ -3,9 +3,9 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 94px;
-    position: fixed;
+    height: 110px;
     background-color: #EFEFEF transparent;
+    border: 1px solid;
 }
 
 header svg {
@@ -14,4 +14,5 @@ header svg {
 
 .avatar {
     margin-right: 55px;
+    cursor: pointer;
 }

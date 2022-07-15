@@ -1,8 +1,11 @@
 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     height: 93px;
 }
 
-a {
-    text-decoration: none;
+.icon {
+    margin-right: 3px;
 }

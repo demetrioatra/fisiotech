@@ -7,12 +7,11 @@ import { Box,
     ListItemText,
     ListItemIcon
 } from '@mui/material';
-import { Link } from 'react-router-dom'
-import SpaIcon from '@mui/icons-material/Spa'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
 import LoginIcon from '@mui/icons-material/Login'
+import SpaIcon from '@mui/icons-material/Spa'
 import './index.css'
 
 const drawerWidth = 280;
@@ -24,52 +23,52 @@ export default function PermanentDrawerLeft() {
             <Drawer
                 className='drawer'
                 sx = {{
-                width: drawerWidth,
-                flexShrink: 0,
-                '& .MuiDrawer-paper': {
                     width: drawerWidth,
-                    boxSizing: 'border-box',
-                },
+                    flexShrink: 0,
+                    '& .MuiDrawer-paper': {
+                        width: drawerWidth,
+                        boxSizing: 'border-box',
+                    }
                 }}
                 variant="permanent"
                 anchor="left"
             >
-                <h1><SpaIcon className = 'icon' fontSize = 'lg' /> Fisiotech</h1>
+                <h1><SpaIcon className = 'icon' fontSize = 'lg' />Fisiotech</h1>
                 <List>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'/home'}>
                             <ListItemIcon><SpaIcon /></ListItemIcon>
-                            <Link to={'/home'}><ListItemText>Home</ListItemText></Link>
+                            <ListItemText>Home</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'/paciente'}>
                             <ListItemIcon><AccountCircleIcon /></ListItemIcon>
-                            <Link to={'/paciente'}><ListItemText>Pacientes</ListItemText></Link>
+                            <ListItemText>Pacientes</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'/plano'}>
                             <ListItemIcon><FolderCopyIcon /></ListItemIcon>
-                            <Link to={'/plano'}><ListItemText>Planos</ListItemText></Link>
+                            <ListItemText>Planos</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'/usuario'}>
                             <ListItemIcon><AccountCircleIcon /></ListItemIcon>
-                            <Link to={'/usuario'}><ListItemText>Usuario</ListItemText></Link>
+                            <ListItemText>Usuario</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'/login'}>
                             <ListItemIcon><LoginIcon /></ListItemIcon>
-                            <Link to={'/login'}><ListItemText>Login</ListItemText></Link>
+                            <ListItemText>Login</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton to={'*'}>
                             <ListItemIcon><ReportProblemIcon /></ListItemIcon>
-                            <Link to={'*'}><ListItemText>Not Found</ListItemText></Link>
+                            <ListItemText>Not Found</ListItemText>
                         </ListItemButton>
                     </ListItem>
                 </List>

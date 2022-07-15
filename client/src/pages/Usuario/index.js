@@ -6,8 +6,9 @@ import DataGrid from '../../components/table/DataGrid';
 export default function Usuario() {
     return (
         <>
-            <Header />
             <SideBar />
+            <Header />
+            <h3>Usuarios</h3>
             <Grid container>
                 <DataGrid />
             </Grid>

@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className = "header">
             <SearchIcon />
-            <Avatar className='avatar'/>
+            <Avatar className='avatar'  />
         </header>
     )
 }
