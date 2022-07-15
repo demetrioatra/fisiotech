@@ -1,15 +1,10 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     height: 110px;
     background-color: #EFEFEF transparent;
-    border: 1px solid;
-}
-
-header svg {
-    margin-left: 51px;
 }
 
 .avatar {

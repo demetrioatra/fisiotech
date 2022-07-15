@@ -5,7 +5,8 @@ import { Box,
     ListItem,
     ListItemButton,
     ListItemText,
-    ListItemIcon
+    ListItemIcon,
+    Divider
 } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'

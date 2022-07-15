@@ -22,11 +22,14 @@ export default function Home() {
     }, [])
 
     return (
-        <Grid container spacing={2}>
+        <>
             <Header />
             <SideBar />
-            <Grid item><Chart /></Grid>
-            <Grid item><Chart /></Grid>
-        </Grid>
+            <Grid className="grid" container spacing={10}>
+                <h2 className='msg'>Hi, Welcome back</h2>
+                <Grid item xs={4}><Chart /></Grid>
+                <Grid item xs={4}><Chart /></Grid>
+            </Grid>
+        </>
     )
 }
