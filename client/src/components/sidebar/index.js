@@ -67,7 +67,7 @@ export default function PermanentDrawerLeft() {
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton to={'/indicadores'}>
+                        <ListItemButton to={'/dashboard'}>
                             <ListItemIcon><PieChartIcon /></ListItemIcon>
                             <ListItemText>Dashboard</ListItemText>
                         </ListItemButton>

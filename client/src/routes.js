@@ -5,7 +5,7 @@ import Paciente from './pages/Paciente'
 import Plano from './pages/Plano'
 import Usuario from './pages/Usuario'
 import Error from './pages/Error'
-import Dashboard from './pages/Indicadores'
+import Dashboard from './pages/Dashboard'
 
 export default function RoutesApp() {
     return (
