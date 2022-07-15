@@ -5,10 +5,9 @@ import './index.css'
 function Header() {
     return (
         <header className = "header">
-            <SearchIcon />
             <Avatar className='avatar'/>
         </header>
     )
 }
 
-export default Header
+export default Header;

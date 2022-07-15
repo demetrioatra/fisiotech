@@ -7,8 +7,9 @@ import {
 } from '@devexpress/dx-react-chart-material-ui';
 import { Animation } from '@devexpress/dx-react-chart';
 import './index.css'
+import { Grid } from '@mui/material';
 
-const data = [
+const data_pat = [
   { patologia: '', area: 12 },
   { patologia: '', area: 7 },
   { patologia: '', area: 7 },
@@ -16,19 +17,29 @@ const data = [
   { patologia: '', area: 6 },
   { patologia: '', area: 5 },
 ];
+const data_org = [
+  {origem: "instagram", area: 5},
+  {origem: "facebook", area: 5},
+  {origem: "email", area: 5},
+  {origem: "recomendação", area: 5},
+];
+
+
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
-
     this.state = {
-      data,
+      data_pat,
+      data_org
     };
   }
 
   render() {
-    const { data: chartData } = this.state;
+    const { data_pat: chartData } = this.state;
+    const { data_org: chartData1 } = this.state;
 
     return (
+      <Grid>
       <Paper className='chartContainer'>
         <Chart
           data={chartData}
@@ -44,6 +55,22 @@ export default class Demo extends React.PureComponent {
           <Animation />
         </Chart>
       </Paper>
+      <Paper className='chartContainer'>
+        <Chart
+          data={chartData1}
+        >
+          <PieSeries
+            valueField="area"
+            argumentField="origem"
+            text='text'
+          />
+          <Title
+            text="Origem dos pacientes"
+          />
+          <Animation />
+        </Chart>
+      </Paper>
+      </Grid>
     );
   }
 }

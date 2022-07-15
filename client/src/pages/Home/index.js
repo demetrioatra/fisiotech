@@ -25,7 +25,7 @@ export default function Home() {
         <Grid container>
             <Header />
             <SideBar />
-            <Grid item><Chart /></Grid>
+            <Grid item ><Chart /></Grid>
         </Grid>
     )
 }

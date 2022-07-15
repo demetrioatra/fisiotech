@@ -33,7 +33,8 @@ export default function PermanentDrawerLeft() {
                 variant="permanent"
                 anchor="left"
             >
-                <h1><SpaIcon className = 'icon' fontSize = 'lg' /> Fisiotech</h1>
+                <br/>
+                <h1><SpaIcon className = 'icon' fontSize = 'lg'  /> Fisiotech</h1>
                 <List>
                 {['Home', 'Pacientes', 'Planos', 'Usuários', 'Login', 'Not Found'].map((text, index) => (
                     <ListItem key = { text } disablePadding>
