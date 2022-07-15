@@ -1,11 +1,12 @@
 import { Avatar } from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search'
 import './index.css'
+import  pfp from '../../imgs/pfp.png'
+
 
 function Header() {
     return (
         <header className = "header">
-            <Avatar className='avatar'/>
+            <Avatar src={pfp} />
         </header>
     )
 }

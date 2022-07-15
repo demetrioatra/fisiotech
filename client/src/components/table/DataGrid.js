@@ -21,7 +21,7 @@ const DataGridTeste = () => {
   console.log(tableData)
 
   return (
-    <div style={{ height: 700, width: '100%' }}>
+    <div style={{ height: 500, width: '100%' }}>
       <DataGrid
         rows={tableData}
         columns={columns}
