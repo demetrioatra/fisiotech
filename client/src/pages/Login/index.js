@@ -1,10 +1,11 @@
-import { Button, TextField, Grid, Paper, Link } from '@mui/material'
+import { Button, TextField, Grid, Paper } from '@mui/material'
 import GoogleIcon from '@mui/icons-material/Google';
 import SpaIcon from '@mui/icons-material/Spa';
+import lobtec from '../../imgs/lobtec.png'
 import './index.css'
 
 export default function Login() {
-    const paperStyle = { padding: 20, height: '68vh', width: 380, margin: '0 auto' }
+    const paperStyle = { padding: 20, height: '60vh', width: 380, margin: '0 auto' }
 
     return (
         <Grid align = "center">
@@ -34,10 +35,8 @@ export default function Login() {
                         fullWidth
                         >Google</Button>
                     </Grid>
-                    <Grid item>
-                        <Link>Privacy policy | Terms</Link>
-                        </Grid>
                 </Grid>
+                <img className='lob' src={lobtec}/>
             </Paper>
         </Grid>
     )

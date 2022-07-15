@@ -1,4 +1,9 @@
 .logo {
     font-size: 36px;
     margin-top: 44px;
+    color: #ff6900;
+}
+
+h2 {
+    color: gray;
 }

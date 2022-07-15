@@ -1,14 +1,18 @@
 import { Avatar } from '@mui/material'
-import avatar from '../../imgs/avatar.png'
-import SearchIcon from '@mui/icons-material/Search'
+import  pfp from '../../imgs/pfp.png'
+import Menu from '../menu/'
 import './index.css'
 
 function Header() {
+
+    function showMenu() {
+        return <Menu />
+    }
     return (
         <header className = "header">
-            <Avatar className='avatar' src={avatar} />
+            <Menu />
         </header>
     )
 }
 
-export default Header
+export default Header;
