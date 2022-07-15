@@ -1,13 +1,14 @@
 import { Grid } from '@mui/material'
 import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
+import DataGrid from '../../Table/DataGrid';
 
 export default function Usuario() {
     return (
         <Grid container>
             <Header />
             <SideBar />
-            <Grid item></Grid>
+            <Grid item><DataGrid /></Grid>
         </Grid>
     )
 }
