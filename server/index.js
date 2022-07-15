@@ -67,21 +67,3 @@ async function startServer () {
         console.log(err)
     }
 }
-
-// Rotas
-app.get('/google', AuthController.google)
-
-app.get('/auth/google',
-    passport.authenticate('google', { scope: ['email', 'profile'] })
-)
-
-app.get('/google/callback',
-    passport.authenticate('google', {
-        successRedirect: '/protected',
-        failureRedirect: '/auth/failure',
-    })
-)
-
-app.get('/auth/failure', AuthController.authFailure)
-app.get('/logout', AuthController.logout)
-app.get('/protected', AuthController.isLoggedIn, AuthController.protected)

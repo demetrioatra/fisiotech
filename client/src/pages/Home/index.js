@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import { Grid } from '@mui/material'
 import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
 import Chart from '../../components/chart'
-import { Grid } from '@mui/material'
 import './index.css'
 
 export default function Home() {
