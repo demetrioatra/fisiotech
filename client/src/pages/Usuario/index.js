@@ -5,10 +5,12 @@ import DataGrid from '../../components/table/DataGrid';
 
 export default function Usuario() {
     return (
+        <>
+        <Header />
+        <SideBar />
         <Grid container>
-            <Header />
-            <SideBar />
-            <Grid item><DataGrid /></Grid>
+            <DataGrid />
         </Grid>
+        </>
     )
 }

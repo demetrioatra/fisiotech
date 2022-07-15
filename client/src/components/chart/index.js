@@ -19,9 +19,8 @@ const data = [
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
-
     this.state = {
-      data,
+      data
     };
   }
 
@@ -33,13 +32,12 @@ export default class Demo extends React.PureComponent {
         <Chart
           data={chartData}
         >
+          <Title
+            text="Patologias atendidas"
+          />
           <PieSeries
             valueField="area"
             argumentField="patologia"
-            text='text'
-          />
-          <Title
-            text="Patologias atendidas"
           />
           <Animation />
         </Chart>

@@ -22,9 +22,10 @@ export default function Home() {
     }, [])
 
     return (
-        <Grid container>
+        <Grid container spacing={2}>
             <Header />
             <SideBar />
+            <Grid item><Chart /></Grid>
             <Grid item><Chart /></Grid>
         </Grid>
     )
