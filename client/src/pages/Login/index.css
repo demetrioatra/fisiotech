@@ -1,11 +1,10 @@
 .logo {
     font-size: 36px;
     margin-top: 44px;
-    color: #ff6900;
 }
 
-h2 {
-    color: gray;
+.logo, h2, p {
+    color: #ff6900;
 }
 
 .lob {

@@ -25,14 +25,20 @@ export default function Login() {
                         <TextField label = "Password" fullWidth required/>
                     </Grid>
                     <Grid item>
-                        <Button variant = 'contained' href = 'http://localhost:3000/home' fullWidth sx={{color:'black', backgroundColor:'#ff6900' }}>Sign In</Button>
+                        <Button
+                        variant = 'contained'
+                        href = 'http://localhost:3000/home'
+                        sx = { { color: 'white', backgroundColor: '#ff6900' } }
+                        fullWidth
+                    >Sign In</Button>
                     </Grid>
                     <Grid item><p>OR</p></Grid>
                     <Grid item>
                         <Button
-                        href = 'http://localhost:3500/auth/google'
                         variant = 'outlined'
                         startIcon = { <GoogleIcon /> }
+                        href = 'http://localhost:3500/auth/google'
+                        sx = { { color: 'white', backgroundColor: '#ff6900' } }
                         fullWidth
                         >Google</Button>
                     </Grid>

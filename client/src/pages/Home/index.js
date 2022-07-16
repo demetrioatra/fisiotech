@@ -8,8 +8,8 @@ export default function Home() {
         <Grid container spacing = { 1 }>
             <Header  />
             <SideBar />
-            <Grid className='bemvindo' margin='auto' paddingTop='20px' >
-                <h1> Seja bem vindo(a) "Nome-Fisioterapeuta" </h1>
+            <Grid className = 'bemvindo' margin = 'auto' paddingTop = '20px'>
+                <h1> Welcome "name" </h1>
             </Grid>
         </Grid>
     )
