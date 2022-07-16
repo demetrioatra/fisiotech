@@ -27,7 +27,7 @@ export default function Login() {
                     <Grid item>
                         <Button
                         variant = 'contained'
-                        href = 'http://localhost:3000/home'
+                        href = 'http://localhost:3000/dashboard'
                         sx = { { color: 'white', backgroundColor: '#ff6900' } }
                         fullWidth
                     >Sign In</Button>
@@ -43,7 +43,7 @@ export default function Login() {
                         >Google</Button>
                     </Grid>
                 </Grid>
-                <img className='lob' src={lobtec}/>
+                <img className='lob' src = { lobtec }/>
             </Paper>
             </Grid>
         </Grid>
