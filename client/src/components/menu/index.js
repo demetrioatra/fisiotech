@@ -42,7 +42,7 @@ export default function PositionedMenu() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose} >Logout</MenuItem>
       </Menu>
     </div>
   )

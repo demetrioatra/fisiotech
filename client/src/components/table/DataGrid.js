@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
+import { margin, positions } from '@mui/system'
 
 const columns = [
   { field: 'id', headerName: 'ID' },
@@ -21,8 +22,8 @@ const DataGridTeste = () => {
   console.log(tableData)
 
   return (
-    <div style={{ height: 500, width: '80%' }}>
-      <DataGrid
+    <div style={{ height: 500, width: '80%', position:'absolute', marginLeft:'280px'}}>
+      <DataGrid className='tabela'
         rows={tableData}
         columns={columns}
         pageSize={12}
