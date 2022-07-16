@@ -6,10 +6,10 @@ import './index.css'
 
 export default function Home() {
     return (
-        <Grid container spacing={1}>
+        <Grid container spacing={1} display='flex'>
             <Header  />
             <SideBar />
-            <Grid item className="charts"><Chart /></Grid>
+            <Grid classname='charts' item xs={4} > <Chart/> </Grid>
         </Grid>
     )
 }
