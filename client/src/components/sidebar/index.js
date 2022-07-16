@@ -12,6 +12,7 @@ import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
 import PieChartIcon from '@mui/icons-material/PieChart';
 import LoginIcon from '@mui/icons-material/Login'
+import HomeIcon from '@mui/icons-material/Home';
 import SpaIcon from '@mui/icons-material/Spa'
 import './index.css'
 
@@ -22,7 +23,7 @@ export default function PermanentDrawerLeft() {
         <Box className = 'drawer' sx = { { display: 'flex' } }>
             <CssBaseline />
             <Drawer
-                className='drawer'
+                className = 'drawer'
                 sx = {{
                     width: drawerWidth,
                     flexShrink: 0,
@@ -31,14 +32,14 @@ export default function PermanentDrawerLeft() {
                         boxSizing: 'border-box',
                     }
                 }}
-                variant="permanent"
-                anchor="left"
+                variant = "permanent"
+                anchor = "left"
             >
                 <h1><SpaIcon className = 'icon' fontSize = 'lg' />Fisiotech</h1>
                 <List>
                     <ListItem disablePadding>
-                        <ListItemButton to={'/home'}>
-                            <ListItemIcon><SpaIcon /></ListItemIcon>
+                        <ListItemButton to = { '/home' }>
+                            <ListItemIcon><HomeIcon /></ListItemIcon>
                             <ListItemText>Home</ListItemText>
                         </ListItemButton>
                     </ListItem>

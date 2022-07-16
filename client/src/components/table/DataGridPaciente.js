@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import DataTable from '../datatable/DataTable';
 
+// Styles
+const positionStyles = {
+  width: '76%',
+  height: '500px',
+  position: 'absolute',
+  marginLeft: '280px'
+}
+
+// Variables
 const columns = [
   { field: '_id', headerName: 'ID', width: 210},
   { field: 'nome', headerName: 'Nome', width: 230 },
@@ -9,17 +18,8 @@ const columns = [
   { field: 'email', headerName: 'Email', width: 200 },
 ]
 
-const userTableStyles = {
-  height: '650px',
-};
-
-const positionStyles = {
-  width: '76%',
-  position: 'absolute',
-  marginLeft: '280px'
-}
-
-const UserTable = ({ onError }) => { 
+// Component
+const PacienteTable = ({ onError }) => { 
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -30,15 +30,15 @@ const UserTable = ({ onError }) => {
   }, []);
 
   return (
-    <div style={positionStyles}>
+    <>
       <DataTable
-        rows={users}
-        columns={columns}
-        loading={!users.length}
-        sx={userTableStyles}
+        rows = { users }
+        columns = { columns }
+        loading = { !users.length }
+        sx = { positionStyles }
       />
-    </div>
+    </>
   );
 };
 
-export default UserTable
+export default PacienteTable
