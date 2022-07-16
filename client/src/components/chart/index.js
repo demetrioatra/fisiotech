@@ -6,8 +6,8 @@ import {
   Title,
 } from '@devexpress/dx-react-chart-material-ui';
 import { Animation } from '@devexpress/dx-react-chart';
-import './index.css'
 import { Grid } from '@mui/material';
+import './index.css'
 
 const data_pat = [
   { patologia: '', area: 12 },

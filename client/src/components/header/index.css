@@ -3,13 +3,8 @@ header {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 110px;
+    height: 102px;
     background-color: #EFEFEF transparent;
-    border-bottom: 1px solid;
-}
-
-header svg {
-    margin-left: 51px;
 }
 
 .avatar {

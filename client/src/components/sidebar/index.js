@@ -10,9 +10,9 @@ import { Box,
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
+import PieChartIcon from '@mui/icons-material/PieChart';
 import LoginIcon from '@mui/icons-material/Login'
 import SpaIcon from '@mui/icons-material/Spa'
-import PieChartIcon from '@mui/icons-material/PieChart';
 import './index.css'
 
 const drawerWidth = 280;
@@ -61,15 +61,15 @@ export default function PermanentDrawerLeft() {
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
-                        <ListItemButton to={'/login'}>
-                            <ListItemIcon><LoginIcon /></ListItemIcon>
-                            <ListItemText>Login</ListItemText>
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
                         <ListItemButton to={'/dashboard'}>
                             <ListItemIcon><PieChartIcon /></ListItemIcon>
                             <ListItemText>Dashboard</ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton to={'/login'}>
+                            <ListItemIcon><LoginIcon /></ListItemIcon>
+                            <ListItemText>Login</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { bottomNavigationClasses, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Paper from "@mui/material";
 
 export default function Cards(){

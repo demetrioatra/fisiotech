@@ -1,12 +1,16 @@
 import { Avatar } from '@mui/material'
-import './index.css'
 import  pfp from '../../imgs/pfp.png'
-
+import Menu from '../menu/'
+import './index.css'
 
 function Header() {
+
+    function showMenu() {
+        return <Menu />
+    }
     return (
         <header className = "header">
-            <Avatar src={pfp} />
+            <Menu />
         </header>
     )
 }

@@ -6,7 +6,6 @@ import './index.css'
 import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
 import Chart from '../../components/chart'
-import { NoMeals } from '@mui/icons-material'
 
 
 
@@ -30,8 +29,8 @@ export default function Home() {
         <Grid container spacing={1}>
             <Header  />
             <SideBar />
-            <Grid className='bemvindo'>
-                <h1> Seja bem vindo(a) "Nome-Fisioterapeuta" </h1>
+            <Grid className='bemvindo' margin='auto' paddingTop='20px' >
+                <h2> Seja bem vindo(a) "Nome-Fisioterapeuta" </h2>
             </Grid>
         </Grid>
     )

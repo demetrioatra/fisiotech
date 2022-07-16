@@ -4,4 +4,14 @@
 
 .errIcon {
     margin-right: 3px;
+    margin-top: 1px;
+}
+
+.botao{
+    text-align: center;
+    color: #ff6900;
+}
+
+h1{
+    color: black;
 }
