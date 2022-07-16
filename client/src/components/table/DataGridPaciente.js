@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import DataTable from '../datatable/DataTable';
 
 const columns = [
-  { field: '_id', headerName: 'ID' },
-  { field: 'nome', headerName: 'Nome', width: 300 },
-  { field: 'telefone', headerName: 'Telefone', width: 300 },
-  { field: 'idade', headerName: 'Idade', width: 300 },
-  { field: 'email', headerName: 'Email', width: 300 },
+  { field: '_id', headerName: 'ID', width: 210},
+  { field: 'nome', headerName: 'Nome', width: 230 },
+  { field: 'telefone', headerName: 'Telefone', width: 150 },
+  { field: 'idade', headerName: 'Idade', width: 100 },
+  { field: 'email', headerName: 'Email', width: 200 },
 ]
 
 const userTableStyles = {

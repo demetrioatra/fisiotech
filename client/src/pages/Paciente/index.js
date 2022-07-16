@@ -8,8 +8,8 @@ export default function Paciente() {
         <>
             <Header />
             <SideBar />
-            <Grid container className="sidebar">
-                <h2>Pacientes</h2>
+            <h3>Pacientes</h3>
+            <Grid container className = "sidebar">
                 <DataGrid />
             </Grid>
         </>

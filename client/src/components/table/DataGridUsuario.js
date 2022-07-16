@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import DataTable from '../datatable/DataTable';
 
 const columns = [
-  { field: '_id', headerName: 'ID' },
+  { field: '_id', headerName: 'ID', width: 210},
   { field: 'email', headerName: 'Email', width: 300 },
-  { field: 'password', headerName: 'Password', width: 300 },
+  { field: 'password', headerName: 'Password', width: 380 },
 ]
 
 const userTableStyles = {
