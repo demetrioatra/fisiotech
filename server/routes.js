@@ -57,7 +57,7 @@ routes.delete('/pacientes/:paciente_id', PacienteController.deletePaciente)
 
 // Rotas para plano
 routes.post('/planos', PlanoController.createPlano)
-routes.get('/planos',isLoggedIn, PlanoController.getPlanos)
+routes.get('/planos', PlanoController.getPlanos)
 routes.get('/planos/:plano_id', PlanoController.getPlanoById)
 routes.put('/planos/:plano_id', PlanoController.updatePlano)
 routes.delete('/planos/:plano_id', PlanoController.deletePlano)
