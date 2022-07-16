@@ -3,7 +3,7 @@ import { Grid } from '@mui/material'
 import SideBar from '../../components/sidebar'
 import Header from '../../components/header'
 import api from "../../api"
-import DataGrid from '../../components/table/DataGrid';
+import DataGrid from '../../components/table/DataGridPlano';
 
 
 function Plano() {
