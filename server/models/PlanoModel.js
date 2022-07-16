@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const opts = { toJSON: { virtuals: true } };
+
 
 // Schema de plano
 const Schema = new mongoose.Schema ({
@@ -18,7 +20,7 @@ const Schema = new mongoose.Schema ({
             compareceu: Boolean
         }]
     }]
-})
+}, opts)
 
 // Export do schema de plano
 module.exports = mongoose.model('Plano', Schema)

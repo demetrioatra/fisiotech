@@ -35,8 +35,7 @@ export default function PositionedMenu() {
         onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'center',
-
+          horizontal: 'left',
         }}
         transformOrigin={{
           vertical: 'top',

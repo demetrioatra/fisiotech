@@ -1,37 +1,163 @@
-import React, {useEffect, useState} from "react";
-import { Grid } from "@mui/material";
-import Paper from "@mui/material";
+import {
+    Box,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    Grid,
+    Typography
+} from "@mui/material";
 
-export default function Cards(){
-    const [cards, setCards] = useState([])
-
-    useEffect(()=> {
-        fetch('http://localhost:3000/home')
-        .then(res => res.json())
-        .then(data => setCards(data))
-    }, [])
-
-    return(
-        <div>
-            <Grid container>
-                <Grid item>
-                    <Paper>1</Paper>
-                </Grid>
-                <Grid item>
-                    <Paper>2</Paper>
-                </Grid>
-                <Grid item>
-                    <Paper>3</Paper>
-                </Grid>
-                <Grid item>
-                    <Paper>4</Paper>
-                </Grid>
-            </Grid>
-            {cards.map(card =>{
-                <p key={card.id}>{card.title}</p>
-            })}
-        </div>
+export default function Cards() {
+    return (
+        <Grid container style={{marginLeft: '280px'}}>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    SUNDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    Monday
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    TUESDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    WEDNESDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    THURSDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    FRIDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+            <Card sx = { { minWidth: 250 } }>
+                <CardContent>
+                <Typography sx = { { fontSize: 14 } } color = "text.secondary" gutterBottom>
+                    SATURDAY
+                </Typography>
+                <Typography variant = "h5" component = "div">
+                    Média diaria atencao
+                </Typography>
+                <Typography sx = { { mb: 1.5 } } color="text.secondary">
+                    adjective
+                </Typography>
+                <Typography variant = "body2">
+                    well meaning and kindly.
+                    <br />
+                    { '"a benevolent smile"' }
+                </Typography>
+                </CardContent>
+                <CardActions>
+                <Button size = "small">Learn More</Button>
+                </CardActions>
+            </Card>
+        </Grid>
     )
-
 }
-

@@ -11,7 +11,7 @@ import './App.css'
 //       dark: '#CC5500',
 //     },
 //     secondary: {
-//       light: '###FEEEF3',
+//       light: ##FEEEF3',
 //       main: '##B300B3',
 //       dark: '#670067',
 //     }
