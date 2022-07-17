@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material'
 import DataGrid from '../../components/table/DataGridUsuario';
-import './index.css'
 
 export default function Usuario() {
     return (

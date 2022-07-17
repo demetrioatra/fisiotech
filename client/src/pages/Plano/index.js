@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import DataGrid from '../../components/table/DataGridPlano';
 
-function Plano() {
+export default function Plano() {
     return (
         <>
             <h3>Planos</h3>
@@ -11,5 +11,3 @@ function Plano() {
         </>
     )
 }
-
-export default Plano

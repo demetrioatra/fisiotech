@@ -1,22 +1,36 @@
-import { Button, TextField, Grid, Paper } from '@mui/material'
+import {
+    Button,
+    TextField,
+    Grid,
+    Paper,
+    Typography
+} from '@mui/material'
 import GoogleIcon from '@mui/icons-material/Google';
 import SpaIcon from '@mui/icons-material/Spa';
 import lobtec from '../../imgs/lobtec.png'
-import './index.css'
 
 export default function Login() {
-    const paperStyle = { padding: 20, height: '60vh', width: 380, margin: '0 auto' }
+    const paperStyle = {
+        padding: 20,
+        height: '60vh',
+        width: 380,
+        margin:'0 auto',
+        marginTop: 32
+    };
 
     return (
         <Grid align = "center">
             <Grid item>
-                <h1 className = 'logo'>
+                <Typography
+                variant='h3'
+                marginTop={4}
+                color = "#ff6900">
                     <SpaIcon fontSize = 'lg' className = 'icon' /> Fisiotech
-                </h1>
+                </Typography>
             </Grid>
             <Grid className='grid'>
             <Paper elevation = { 2 } style = { paperStyle } className='paper'>
-                <h2>Sign in to continue</h2>
+                <Typography variant = 'h4' style={{color: '#ff6900'}}>Sign in to continue</Typography>
                 <Grid container spacing = { 2 } direction = "column" style = { { marginTop: 20 } }>
                     <Grid item>
                         <TextField label = "Email" fullWidth required/>
@@ -32,7 +46,7 @@ export default function Login() {
                         fullWidth
                     >Sign In</Button>
                     </Grid>
-                    <Grid item><p>OR</p></Grid>
+                    <Grid item color = "#ff6900"><p>OR</p></Grid>
                     <Grid item>
                         <Button
                         variant = 'contained'
@@ -43,7 +57,7 @@ export default function Login() {
                         >Google</Button>
                     </Grid>
                 </Grid>
-                <img className='lob' src = { lobtec }/>
+                <img src = { lobtec }/>
             </Paper>
             </Grid>
         </Grid>
