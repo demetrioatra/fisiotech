@@ -6,7 +6,7 @@ export default function Paciente() {
         <Grid container spacing={3} direction="column">
             <Grid item>
                 <Typography
-                variant = "h4"
+                variant = "h5"
                 style={{marginTop: 15}}
                 >Pacientes</Typography>
             </Grid>

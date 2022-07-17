@@ -8,7 +8,7 @@ export default function Plano() {
         direction="column">
             <Grid item>
                 <Typography
-                variant="h4"
+                variant="h5"
                 style={{marginTop: 15}}
                 >Planos</Typography>
             </Grid>

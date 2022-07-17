@@ -1,9 +1,10 @@
 import * as React from 'react'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
-import { Avatar } from '@mui/material'
+import { Avatar, Divider, Typography } from '@mui/material'
 import Menu from '@mui/material/Menu'
 import  pfp from '../../imgs/pfp.png'
+import { Box, Container } from '@mui/system'
 
 export default function PositionedMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -42,7 +43,12 @@ export default function PositionedMenu() {
           horizontal: 'center',
         }}
       >
-        <MenuItem onClick={handleClose} >Logout</MenuItem>
+        <Container>
+          <Typography variant="subtitle2">Dr. (a) fisio1</Typography>
+          <Typography variant="body2">fisio1@gmail.com</Typography>
+        </Container>
+        <Divider />
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
   )

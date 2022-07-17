@@ -41,43 +41,43 @@ export default function PermanentDrawerLeft() {
                     <ListItem disablePadding >
                         <ListItemButton to = { '/dashboard' }>
                             <ListItemIcon style={{color:'#670067'}}><PieChartIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Dashboard</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Dashboard</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/paciente' }>
                             <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Pacientes</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Pacientes</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/plano' }>
                             <ListItemIcon style={{color:'#670067'}}><FolderCopyIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Planos</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Planos</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/usuario' }>
                             <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Usuario</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Usuario</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding >
                         <ListItemButton to = { '/doc' }>
                             <ListItemIcon style={{color:'#670067'}}><ArticleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Documentação</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Documentação</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/login' }>
                             <ListItemIcon style={{color:'#670067'}}><LoginIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Login</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Login</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '*' }>
                             <ListItemIcon style={{color:'#670067'}}><ReportProblemIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Not Found</b></ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Not Found</ListItemText>
                         </ListItemButton>
                     </ListItem>
                 </List>
