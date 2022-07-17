@@ -12,6 +12,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
 import PieChartIcon from '@mui/icons-material/PieChart'
+import ArticleIcon from '@mui/icons-material/Article'
 import LoginIcon from '@mui/icons-material/Login'
 import SpaIcon from '@mui/icons-material/Spa'
 import './index.css'
@@ -41,6 +42,12 @@ export default function PermanentDrawerLeft() {
                         <ListItemButton to = { '/dashboard' }>
                             <ListItemIcon style={{color:'#670067'}}><PieChartIcon /></ListItemIcon>
                             <ListItemText style={{color:'#670067'}}><b>Dashboard</b></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding >
+                        <ListItemButton to = { '/doc' }>
+                            <ListItemIcon style={{color:'#670067'}}><ArticleIcon /></ListItemIcon>
+                            <ListItemText style={{color:'#670067'}}><b>Documentação</b></ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>

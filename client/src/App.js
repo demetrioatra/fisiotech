@@ -1,5 +1,4 @@
 import RoutesApp from './routes'
-import './App.css'
 // import { createTheme } from '@mui/system'
 // import { ThemeProvider } from '@mui/private-theming'
 
