@@ -1,13 +1,20 @@
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import DataGrid from '../../components/table/DataGridUsuario';
 
 export default function Usuario() {
     return (
-        <>
-            <h3>Usuários</h3>
-            <Grid container>
+        <Grid container
+        spacing={3}
+        direction="column">
+            <Grid item>
+                <Typography
+                variant="h5"
+                style={{marginTop: 15}}
+                >Usuários</Typography>
+            </Grid>
+            <Grid item>
                 <DataGrid />
             </Grid>
-        </>
+        </Grid>
     )
 }

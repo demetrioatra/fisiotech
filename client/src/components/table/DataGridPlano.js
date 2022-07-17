@@ -3,15 +3,13 @@ import DataTable from '../datatable/DataTable';
 
 // Styles
 const positionStyles = {
-  width: '76%',
-  height: '500px',
-  position: 'absolute',
-  marginLeft: '280px'
+  width: '74%',
+  height: '440px',
+  position: 'absolute'
 }
 
 // Variables
 const columns = [
-  { field: '_id', headerName: 'ID', width: 210 },
   { field: 'pacienteId', headerName: 'Paciente ID', width: 210 },
   { field: 'ficha', headerName: 'Ficha', width: 470 },
 ]

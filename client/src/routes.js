@@ -15,14 +15,14 @@ export default function RoutesAp() {
         <Routes>
             <Route path = '/' element = { <Layout /> } >
                 <Route path = '/dashboard' element = { <Dash /> } />
-                <Route path = '/doc' element = { <Doc /> } />
                 <Route path = '/paciente' element = { <Paciente /> } />
-                <Route path = '/plano' element = { <Plano /> } />
-                <Route path = '/usuario' element = { <Usuario /> } />
                 <Route path = '/pacientepost' element = { <pacientePost /> } />
+                <Route path = '/plano' element = { <Plano /> } />
                 <Route path = '/planopost' element = { <planoPost /> } />
+                <Route path = '/usuario' element = { <Usuario /> } />
             </Route>
             <Route path = '/login'  element = { <Login /> } />
+            <Route path = '/doc' element = { <Doc /> } />
             <Route path = '*' element = { <Error /> } />
         </Routes>
     )

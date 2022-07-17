@@ -22,7 +22,7 @@ export default function Login() {
         <Grid align = "center">
             <Grid item>
                 <Typography
-                variant='h3'
+                variant='h4'
                 marginTop={4}
                 color = "#ff6900">
                     <SpaIcon fontSize = 'lg' className = 'icon' /> Fisiotech

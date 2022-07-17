@@ -44,12 +44,6 @@ export default function PermanentDrawerLeft() {
                             <ListItemText style={{color:'#670067'}}><b>Dashboard</b></ListItemText>
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding >
-                        <ListItemButton to = { '/doc' }>
-                            <ListItemIcon style={{color:'#670067'}}><ArticleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}><b>Documentação</b></ListItemText>
-                        </ListItemButton>
-                    </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/paciente' }>
                             <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
@@ -66,6 +60,12 @@ export default function PermanentDrawerLeft() {
                         <ListItemButton to = { '/usuario' }>
                             <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
                             <ListItemText style={{color:'#670067'}}><b>Usuario</b></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding >
+                        <ListItemButton to = { '/doc' }>
+                            <ListItemIcon style={{color:'#670067'}}><ArticleIcon /></ListItemIcon>
+                            <ListItemText style={{color:'#670067'}}><b>Documentação</b></ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>

@@ -3,11 +3,10 @@ header {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 102px;
+    height: 94px;
     background-color: #EFEFEF transparent;
 }
 
 .avatar {
-    margin-right: 55px;
     cursor: pointer;
 }
