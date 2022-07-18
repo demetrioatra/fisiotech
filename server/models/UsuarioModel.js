@@ -4,6 +4,7 @@ const opts = { toJSON: { virtuals: true } };
 
 // Schema de usuário
 const Schema = new mongoose.Schema ({
+    nome: String,
     email: String,
     password: String
 }, opts)

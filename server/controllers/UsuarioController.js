@@ -6,10 +6,10 @@ const UsuarioController = {
     // Método create
     async createUsuario(req, res) {
         // Guarda o corpo da requisição
-        const { email, password } = req.body
+        const { nome, email, password } = req.body
 
         try {
-            const usuario = await Usuario.create({ email, password })
+            const usuario = await Usuario.create({ nome, email, password })
             console.log('Usuário criado com sucesso!')
             return res.status(200).json(usuario)
         } catch (err) {
@@ -49,12 +49,12 @@ const UsuarioController = {
     // Método update
     async updateUsuario(req, res) {
         // Guarda o corpo e o id passados na requisição
-        const { email, password } = req.body
+        const { nome, email, password } = req.body
         const { usuario_id } = req.params
 
         try {
             const usuario =
-                await Usuario.findByIdAndUpdate(usuario_id, { email, password }, { new: true })
+                await Usuario.findByIdAndUpdate(usuario_id, { nome, email, password }, { new: true })
             console.log('Usuário alterado com sucesso!')
             return res.status(200).json(usuario)
         } catch (err) {

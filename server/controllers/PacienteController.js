@@ -20,8 +20,17 @@ const PacienteController = {
 
     // Método readAll
     async getPacientes(req, res) {
+        const lookup = {
+            $lookup: {
+                from: 'origens',
+                localField: 'origemId',
+                foreignField: '_id',
+                as: 'origem'
+            }
+        }
+
         try {
-            const pacientes = await Paciente.find()
+            const pacientes = await Paciente.aggregate([lookup])
             console.log('Pacientes listados com sucesso!')
             return res.status(200).json(pacientes)
         } catch (err) {

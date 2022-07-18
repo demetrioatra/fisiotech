@@ -64,7 +64,7 @@ const Paciente = () => {
               <Grid item>
                 <TextField
                   select
-                  label='Id do Paciente'
+                  label='Paciente'
                   fullWidth
                   type="text"
                   required
@@ -90,7 +90,7 @@ const Paciente = () => {
               </Grid>
               <Grid item>
                 <TextField
-                  label='Id do Paciente'
+                  label='Atenção'
                   fullWidth
                   type="text"
                   required

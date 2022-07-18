@@ -9,13 +9,13 @@ class ApexChart extends React.Component {
     super(props);
 
     this.state = {
-      series: [44, 55, 13, 43, 10, 12],
+      series: [1, 2, 2, 1],
       options: {
         chart: {
           width: 380,
           type: 'pie',
         },
-        labels: ['Hérnia de disco', 'Escoliose', 'Fraturas', 'Artrose', 'Luxações', 'Osteoporose'],
+        labels: ['Hérnia de disco', 'Escoliose', 'Fraturas', 'Artrose'],
         responsive: [{
           breakpoint: 480,
           options: {

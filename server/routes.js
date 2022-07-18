@@ -11,7 +11,7 @@ const { Router } = require('express')
 const routes = Router()
 
 // Rota para desafios
-routes.get('/', HomeController.countOrigins)
+routes.get('/', HomeController.countPatologias)
 
 //Google Authenticate Oauth2
 require('dotenv').config()
@@ -47,13 +47,13 @@ function isLoggedIn(req, res, next) {
   routes.get('/auth/google/failure', (req, res) => {
     res.send('Failed to authenticate..');
   });
-
-// Rotas para paciente
-routes.post('/pacientes', PacienteController.createPaciente)
-routes.get('/pacientes', PacienteController.getPacientes)
-routes.get('/pacientes/:paciente_id', PacienteController.getPacienteById)
-routes.put('/pacientes/:paciente_id', PacienteController.updatePaciente)
-routes.delete('/pacientes/:paciente_id', PacienteController.deletePaciente)
+  
+  // Rotas para paciente
+  routes.post('/pacientes', PacienteController.createPaciente)
+  routes.get('/pacientes', PacienteController.getPacientes)
+  routes.get('/pacientes/:paciente_id', PacienteController.getPacienteById)
+  routes.put('/pacientes/:paciente_id', PacienteController.updatePaciente)
+  routes.delete('/pacientes/:paciente_id', PacienteController.deletePaciente)
 
 // Rotas para plano
 routes.post('/planos', PlanoController.createPlano)
@@ -82,6 +82,8 @@ routes.get('/usuarios', UsuarioController.getUsuarios)
 routes.get('/usuarios/:usuario_id', UsuarioController.getUsuarioById)
 routes.put('/usuarios/:usuario_id', UsuarioController.updateUsuario)
 routes.delete('/usuarios/:usuario_id', UsuarioController.deleteUsuario)
+
+
 
 // Rota para autenticação
 routes.post('/auth', AuthController.createToken)

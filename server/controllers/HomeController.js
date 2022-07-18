@@ -1,25 +1,23 @@
-const Pacientes = require('../models/PacienteModel')
+const Planos = require('../models/PlanoModel')
 
 // Controlador Home
-// Contém o método gerador dos indicadores
 const HomeController = {
 
-    // Método 
-    // 
-    async countOrigins(req, res) {
+    // Método
+    async countPatologias(req, res) {
         // Guarda a lógica para agrupar patologias
         const group = {
             $group: {
-                _id: '$origemId',
+                _id: '$ficha.patologiaId',
                 count: { $sum: 1 }
         }}
 
         try {
-            let indicadorOrigens = await Pacientes.aggregate([group])
-            console.log('')
-            return res.status(200).json(indicadorOrigens)
+            let indicadorPatologias = await Planos.aggregate([group])
+            console.log('Sucesso!')
+            return res.status(200).json(indicadorPatologias)
         } catch (err) {
-            console.log('Patologias ')
+            console.log('Falha...')
             return res.status(400).json(err)
         }
     }
