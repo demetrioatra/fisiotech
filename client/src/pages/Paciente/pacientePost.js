@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
   Button,
   Grid,
+  MenuItem,
   Paper,
   TextField,
-  Typography
+  Typography,
 } from "@mui/material"
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import { getOrigem } from '../../api'
 
 // Styles
 const paperStyle = {
@@ -17,22 +19,32 @@ const paperStyle = {
 }
 
 const Paciente = () => {
-  const [nome, setNome] = useState('')
-  const [telefone, setTelefone] = useState('')
-  const [idade, setIdade] = useState('')
-  const [email, setEmail] = useState('')
-  const [origemid, setOrigemId] = useState('')
+  const [ nome, setNome ] = useState('')
+  const [ telefone, setTelefone ] = useState('')
+  const [ idade, setIdade ] = useState('')
+  const [ email, setEmail ] = useState('')
+  const [ origemId, setOrigemId ] = useState('')
+  const [ origens, setOrigens ] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      const resOrigem = await getOrigem();
+      setOrigens(resOrigem.data)
+    })()
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const paciente = { nome, telefone, idade, email, origemid }
+    const paciente = { nome, telefone, idade, email, origemId }
 
     fetch('http://localhost:3500/pacientes', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(paciente)
     }).then(() => {
-      console.log('Novo paciente adicionado')
+      console.log('Novo paciente adicionado!')
+    }).catch(() => {
+      console.log('...')
     })
   }
 
@@ -95,11 +107,17 @@ const Paciente = () => {
               </Grid>
               <Grid item>
                 <TextField
+                  select
                   label='Id de Origem'
                   fullWidth
-                  value={origemid}
-                  onChange={(e) => setOrigemId(e.target.value)}
-                />
+                  value={origemId}
+                  onChange={(e) => setOrigemId(e.target.value)}>
+                  {origens.map((o) => (
+                    <MenuItem key={o._id} value={o._id}>
+                      {o.descricao}
+                    </MenuItem>
+                  ))}
+                </TextField>
               </Grid>
               <Grid item>
                 <Button

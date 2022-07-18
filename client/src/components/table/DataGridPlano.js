@@ -11,7 +11,10 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'pacienteId', headerName: 'Paciente ID', width: 210 },
+  { field: 'pacienteId', headerName: 'Paciente ID', width: 210, hide: true },
+  { field: 'nome', headerName: 'Nome', width: 200 },
+  { field: 'patologia', headerName: 'Patologia', width: 210 },
+  { field: 'atencao', headerName: 'Atenção', width: 210 },
   {
     field: 'ficha',
     headerName: 'Fichas',
@@ -36,7 +39,7 @@ const PlanoTable = ({ onError }) => {
           .then((response) => response.json())
           .then((json) => setUsers(json))
           .catch(() => onError())
-  }, []);
+  }, [])
 
   return (
     <>
@@ -47,7 +50,7 @@ const PlanoTable = ({ onError }) => {
         sx = { positionStyles }
       />
     </>
-  );
-};
+  )
+}
 
 export default PlanoTable

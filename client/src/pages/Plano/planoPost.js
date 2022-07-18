@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Button,
   Grid,
+  MenuItem,
   Paper,
   TextField,
   Typography
 } from "@mui/material"
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import { getPaciente } from '../../api'
 
 // Styles
 const paperStyle = {
@@ -17,18 +19,28 @@ const paperStyle = {
 }
 
 const Paciente = () => {
-  const [pacienteid, setPacienteId] = useState('')
+  const [ pacienteId, setPacienteId ] = useState('')
+  const [ pacientes, setPacientes ] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      const resPaciente = await getPaciente();
+      setPacientes(resPaciente.data)
+    })()
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const plano = { pacienteid };
+    const plano = { pacienteId };
 
     fetch('http://localhost:3500/planos', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(plano)
     }).then(() => {
-      console.log('Novo paciente adicionado')
+      console.log('Novo paciente adicionado!')
+    }).catch(() => {
+      console.log('...')
     })
   }
 
@@ -51,11 +63,38 @@ const Paciente = () => {
               spacing={2}>
               <Grid item>
                 <TextField
+                  select
                   label='Id do Paciente'
                   fullWidth
                   type="text"
                   required
-                  value={pacienteid}
+                  value={pacienteId}
+                  onChange={(e) => setPacienteId(e.target.value)}
+                >
+                  {pacientes.map((p) => (
+                    <MenuItem key={p._id} value={p._id}>
+                      {p.nome}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Grid>
+              <Grid item>
+                <TextField
+                  label='patologia'
+                  fullWidth
+                  type="text"
+                  required
+                  value={pacienteId}
+                  onChange={(e) => setPacienteId(e.target.value)}
+                />
+              </Grid>
+              <Grid item>
+                <TextField
+                  label='Id do Paciente'
+                  fullWidth
+                  type="text"
+                  required
+                  value={pacienteId}
                   onChange={(e) => setPacienteId(e.target.value)}
                 />
               </Grid>

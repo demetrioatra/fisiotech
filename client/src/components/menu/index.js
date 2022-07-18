@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import { Avatar, Divider, Typography } from '@mui/material'
 import Menu from '@mui/material/Menu'
 import  pfp from '../../imgs/pfp.png'
-import { Box, Container } from '@mui/system'
+import {  Container } from '@mui/system'
 
 export default function PositionedMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)

@@ -29,7 +29,9 @@ const Usuario = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(usuario)
     }).then(() => {
-      console.log('Novo usuário adicionado')
+      console.log('Novo usuário adicionado!')
+    }).catch(() => {
+      console.log('...')
     })
   }
 
