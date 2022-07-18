@@ -33,7 +33,7 @@ function isLoggedIn(req, res, next) {
   
   routes.get('/google/callback',
   passport.authenticate( 'google', {
-    successRedirect: '/pacientes',
+    successRedirect: 'http://localhost:3000/dashboard',
     failureRedirect: '/auth/google/failure'
   })
   );
