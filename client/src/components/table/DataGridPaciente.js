@@ -1,3 +1,5 @@
+import { Paper } from '@mui/material';
+import { borderRadius } from '@mui/system';
 import React, { useState, useEffect } from 'react'
 import DataTable from '../datatable/DataTable';
 
@@ -5,7 +7,8 @@ import DataTable from '../datatable/DataTable';
 const positionStyles = {
   width: '74%',
   height: '440px',
-  position: 'absolute'
+  position: 'absolute',
+  borderRadius: 4
 }
 
 // Variables

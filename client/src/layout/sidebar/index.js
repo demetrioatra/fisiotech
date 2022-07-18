@@ -37,48 +37,48 @@ export default function PermanentDrawerLeft() {
                 variant = 'permanent'
                 anchor = 'left'
             >
-                <h1 style={{color:'#ff6900'}}><SpaIcon className = 'icon' fontSize = 'lg' />Fisiotech</h1>
+                <h1 style = { { color:'#ff6900' } }><SpaIcon className = 'icon' fontSize = 'lg' />Fisiotech</h1>
                 <List>
                     <ListItem disablePadding >
                         <ListItemButton to = { '/dashboard' }>
-                            <ListItemIcon style={{color:'#670067'}}><PieChartIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Dashboard</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><PieChartIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Dashboard</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/paciente' }>
-                            <ListItemIcon style={{color:'#670067'}}><SupervisorAccountIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Pacientes</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><SupervisorAccountIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Pacientes</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/plano' }>
-                            <ListItemIcon style={{color:'#670067'}}><FolderCopyIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Planos</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><FolderCopyIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Planos</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/usuario' }>
-                            <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Usuários</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><AccountCircleIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Usuários</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding >
                         <ListItemButton to = { '/doc' }>
-                            <ListItemIcon style={{color:'#670067'}}><ArticleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Documentação</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><ArticleIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Documentação</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/login' }>
-                            <ListItemIcon style={{color:'#670067'}}><LoginIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Login</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><LoginIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Login</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '*' }>
-                            <ListItemIcon style={{color:'#670067'}}><WarningRoundedIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Not Found</ListItemText>
+                            <ListItemIcon style = { { color:'#670067' } }><WarningRoundedIcon /></ListItemIcon>
+                            <ListItemText style = { { color:'#670067' } }>Not Found</ListItemText>
                         </ListItemButton>
                     </ListItem>
                 </List>

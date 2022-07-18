@@ -21,7 +21,9 @@ export default function Paciente() {
                     ><b>Pacientes</b></Typography>
                     <Button
                     variant = "contained"
+                    size = "small"
                     startIcon = { <AddRoundedIcon /> }
+                    style={{borderRadius: 10}}
                     >Novo Paciente</Button>
                 </Grid>
             </Grid>

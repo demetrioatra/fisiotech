@@ -21,7 +21,9 @@ export default function Plano() {
                     ><b>Planos</b></Typography>
                     <Button
                     variant = "contained"
+                    size = "small"
                     startIcon = { <AddRoundedIcon /> }
+                    style={{borderRadius: 10}}
                     >Novo Plano</Button>
                 </Grid>
             </Grid>

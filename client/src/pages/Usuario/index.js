@@ -21,7 +21,9 @@ export default function Usuario() {
                     ><b>Usuários</b></Typography>
                     <Button
                     variant="contained"
+                    size = "small"
                     startIcon={<AddRoundedIcon/>}
+                    style={{borderRadius: 10}}
                     >Novo Usuário</Button>
                 </Grid>
             </Grid>

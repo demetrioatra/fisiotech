@@ -5,7 +5,8 @@ import DataTable from '../datatable/DataTable';
 const positionStyles = {
   width: '74%',
   height: '440px',
-  position: 'absolute'
+  position: 'absolute',
+  borderRadius: 4
 }
 
 // Variables
