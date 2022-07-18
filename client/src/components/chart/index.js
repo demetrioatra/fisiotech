@@ -1,6 +1,8 @@
-import { Paper } from '@mui/material';
-import React from 'react';
-import ReactApexChart from 'react-apexcharts';
+import React from 'react'
+import {
+  Paper
+} from '@mui/material'
+import ReactApexChart from 'react-apexcharts'
 
 class ApexChart extends React.Component {
   constructor(props) {

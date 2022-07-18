@@ -8,8 +8,9 @@ import {
     ListItemText,
     ListItemIcon
 } from '@mui/material'
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount'
+import WarningRoundedIcon from '@mui/icons-material/WarningRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
 import PieChartIcon from '@mui/icons-material/PieChart'
 import ArticleIcon from '@mui/icons-material/Article'
@@ -46,7 +47,7 @@ export default function PermanentDrawerLeft() {
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '/paciente' }>
-                            <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
+                            <ListItemIcon style={{color:'#670067'}}><SupervisorAccountIcon /></ListItemIcon>
                             <ListItemText style={{color:'#670067'}}>Pacientes</ListItemText>
                         </ListItemButton>
                     </ListItem>
@@ -59,7 +60,7 @@ export default function PermanentDrawerLeft() {
                     <ListItem disablePadding>
                         <ListItemButton to = { '/usuario' }>
                             <ListItemIcon style={{color:'#670067'}}><AccountCircleIcon /></ListItemIcon>
-                            <ListItemText style={{color:'#670067'}}>Usuario</ListItemText>
+                            <ListItemText style={{color:'#670067'}}>Usuários</ListItemText>
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding >
@@ -76,7 +77,7 @@ export default function PermanentDrawerLeft() {
                     </ListItem>
                     <ListItem disablePadding>
                         <ListItemButton to = { '*' }>
-                            <ListItemIcon style={{color:'#670067'}}><ReportProblemIcon /></ListItemIcon>
+                            <ListItemIcon style={{color:'#670067'}}><WarningRoundedIcon /></ListItemIcon>
                             <ListItemText style={{color:'#670067'}}>Not Found</ListItemText>
                         </ListItemButton>
                     </ListItem>

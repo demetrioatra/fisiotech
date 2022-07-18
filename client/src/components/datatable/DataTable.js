@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid'
 
 const DataTable = ({
     rows,

@@ -1,16 +1,29 @@
-import { Grid, Typography } from '@mui/material'
-import DataGrid from '../../components/table/DataGridPlano';
+import {
+    Button,
+    Grid,
+    Typography
+} from '@mui/material'
+import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import DataGrid from '../../components/table/DataGridPlano'
 
 export default function Plano() {
     return (
         <Grid container
-        spacing={3}
-        direction="column">
+        spacing = { 3 }
+        direction = "column">
             <Grid item>
-                <Typography
-                variant="h5"
-                style={{marginTop: 15}}
-                >Planos</Typography>
+                <Grid container
+                direction="row"
+                style = { { justifyContent: "space-between" } }>
+                    <Typography
+                    variant = "h5"
+                    style = { { marginTop: 15 } }
+                    ><b>Planos</b></Typography>
+                    <Button
+                    variant = "contained"
+                    startIcon = { <AddRoundedIcon /> }
+                    >Novo Plano</Button>
+                </Grid>
             </Grid>
             <Grid item>
                 <DataGrid />
