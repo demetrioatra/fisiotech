@@ -20,6 +20,7 @@ export default function Usuario() {
                     style={{marginTop: 15}}
                     ><b>Usuários</b></Typography>
                     <Button
+                    href = 'http://localhost:3000/dashboard'
                     variant="contained"
                     size = "small"
                     startIcon={<AddRoundedIcon/>}

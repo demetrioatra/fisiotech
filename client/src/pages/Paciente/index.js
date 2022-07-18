@@ -20,6 +20,7 @@ export default function Paciente() {
                     style = { { marginTop: 15 } }
                     ><b>Pacientes</b></Typography>
                     <Button
+                    href = 'http://localhost:3000/dashboard'
                     variant = "contained"
                     size = "small"
                     startIcon = { <AddRoundedIcon /> }

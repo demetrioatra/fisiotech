@@ -9,10 +9,24 @@ const positionStyles = {
   borderRadius: 4
 }
 
+
 // Variables
 const columns = [
   { field: 'pacienteId', headerName: 'Paciente ID', width: 210 },
-  { field: 'ficha', headerName: 'Ficha', width: 470 },
+  //{ field: 'ficha', headerName: 'Ficha', width: 470 },
+  {
+    field: 'ficha',
+    headerName: 'Fichas',
+    width: 150,
+    renderCell: (params) => (
+      <ul className="flex">
+        {params.value.map((ficha, index) => (
+          <li key={index}>{ficha.roleName}</li>
+        ))}
+      </ul>
+    ),
+    type: 'string',
+  },
 ]
 
 // Component

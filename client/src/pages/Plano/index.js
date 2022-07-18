@@ -21,6 +21,7 @@ export default function Plano() {
                     ><b>Planos</b></Typography>
                     <Button
                     variant = "contained"
+                    href = 'http://localhost:3000/dashboard'
                     size = "small"
                     startIcon = { <AddRoundedIcon /> }
                     style={{borderRadius: 10}}
