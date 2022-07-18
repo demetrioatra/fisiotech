@@ -1,5 +1,3 @@
-import { Paper } from '@mui/material';
-import { borderRadius } from '@mui/system';
 import React, { useState, useEffect } from 'react'
 import DataTable from '../datatable/DataTable';
 
@@ -13,10 +11,11 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'nome', headerName: 'Nome', width: 230 },
+  { field: 'nome', headerName: 'Nome', width: 200 },
   { field: 'telefone', headerName: 'Telefone', width: 150 },
   { field: 'idade', headerName: 'Idade', width: 100 },
   { field: 'email', headerName: 'Email', width: 200 },
+  { field: 'origemId', headerName: 'Origem', width: 230 }
 ]
 
 // Component

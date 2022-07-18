@@ -1,36 +1,89 @@
-import { useState } from "react";
+import { useState } from "react"
+import {
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Typography
+} from "@mui/material"
+import AddRoundedIcon from '@mui/icons-material/AddRounded'
 
-const Paciente = () => {
-  const [pacienteid, setPacienteId] = useState('');
+// Styles
+const paperStyle = {
+  padding: 20,
+  height: '35vh',
+  margin: '0 auto',
+  borderRadius: 20
+}
+
+const Usuario = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const plano = { pacienteid };
+    const usuario = { email, password }
 
-    fetch('http://localhost:3500/planos', {
+    fetch('http://localhost:3500/usuarios', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(plano)
+      body: JSON.stringify(usuario)
     }).then(() => {
-      console.log('Novo paciente adicionado');
+      console.log('Novo usuário adicionado')
     })
   }
 
   return (
-    <div className="create">
-      <h2>Adicionar um novo plano</h2>
+    <Grid container
+      spacing={2}
+      direction="column">
       <form onSubmit={handleSubmit}>
-        <label>Paciente Id:</label>
-        <input 
-          type="text" 
-          required 
-          value={pacienteid}
-          onChange={(e) => setPacienteId(e.target.value)}
-        ></input>
-        <button>Adicionar um plano</button>
+        <Grid item>
+          <Typography
+            variant="h5"
+            style={{ marginTop: 15 }}
+          ><b>Novo Usuário</b></Typography>
+        </Grid>
+        <Grid item>
+          <Paper
+            style={paperStyle}>
+            <Grid container
+            direction="column"
+            spacing={2}>
+              <Grid item>
+                <TextField
+                  label = 'E-mail'
+                  fullWidth
+                  type="text"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Grid>
+              <Grid item>
+                <TextField
+                  fullWidth
+                  label = 'Password'
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Grid>
+              <Grid item>
+                <Button
+                  fullWidth
+                  type="submit"
+                  variant="contained"
+                  startIcon={<AddRoundedIcon />}
+                >Adicionar um plano</Button>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
       </form>
-    </div>
-  );
+    </Grid>
+  )
 }
- 
-export default Paciente;
+
+export default Usuario;

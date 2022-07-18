@@ -33,11 +33,11 @@ class ApexChart extends React.Component {
 
   render() {
     return (
-      <Paper id = "chart">
+      <Paper id = 'chart'>
         <ReactApexChart
         options = { this.state.options }
         series = { this.state.series }
-        type = "pie"
+        type = 'pie'
         width = { 420 }
         height = { 400 }/>
       </Paper>
