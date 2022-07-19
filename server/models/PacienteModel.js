@@ -8,7 +8,9 @@ const Schema = new mongoose.Schema ({
     telefone: String,
     idade: String,
     email: String,
-    origemId: String
+    origemId: {
+      type: mongoose.Schema.Types.ObjectId
+    }
 }, opts)
 
 // Export do schema do paciente

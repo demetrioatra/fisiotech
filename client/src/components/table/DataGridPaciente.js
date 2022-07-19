@@ -38,9 +38,10 @@ const PacienteTable = ({ onError }) => {
         idade: p.idade,
         email: p.email,
         origem: p.origem.map((o) => o.descricao)
+
       }
     })
-    
+    console.log({rows})
   return (
     <DataTable
       columns={columns}
