@@ -19,12 +19,12 @@ const paperStyle = {
 }
 
 const Paciente = () => {
-  const [ nome, setNome ] = useState('')
-  const [ telefone, setTelefone ] = useState('')
-  const [ idade, setIdade ] = useState('')
-  const [ email, setEmail ] = useState('')
-  const [ origemId, setOrigemId ] = useState('')
-  const [ origens, setOrigens ] = useState([])
+  const [nome, setNome] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [idade, setIdade] = useState('')
+  const [email, setEmail] = useState('')
+  const [origemId, setOrigemId] = useState('')
+  const [origens, setOrigens] = useState([])
 
   useEffect(() => {
     (async () => {
@@ -49,89 +49,84 @@ const Paciente = () => {
   }
 
   return (
-    <Grid container
-      spacing={2}
-      direction="column">
+    <>
       <form onSubmit={handleSubmit}>
-        <Grid item>
-          <Typography
-            variant="h5"
-            style={{ marginTop: 15 }}
-          ><b>Novo Paciente</b></Typography>
-        </Grid>
-        <Grid item>
-          <Paper
-            style={paperStyle}>
-            <Grid container
-              direction="column"
-              spacing={2}>
-              <Grid item>
-                <TextField
-                  label='Nome'
-                  fullWidth
-                  type="text"
-                  required
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  label='Telefone'
-                  fullWidth
-                  type="text"
-                  required
-                  value={telefone}
-                  onChange={(e) => setTelefone(e.target.value)}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  label='Idade'
-                  fullWidth
-                  type="text"
-                  required
-                  value={idade}
-                  onChange={(e) => setIdade(e.target.value)}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  label='E-mail'
-                  fullWidth
-                  type="text"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  select
-                  label='Id de Origem'
-                  fullWidth
-                  value={origemId}
-                  onChange={(e) => setOrigemId(e.target.value)}>
-                  {origens.map((o) => (
-                    <MenuItem key={o._id} value={o._id}>
-                      {o.descricao}
-                    </MenuItem>
-                  ))}
-                </TextField>
-              </Grid>
-              <Grid item>
-                <Button
-                  fullWidth
-                  type="submit"
-                  variant="contained"
-                  startIcon={<AddRoundedIcon />}
-                >Adicionar Paciente</Button>
-              </Grid>
+        <Typography
+          variant="h5"
+          style={{ marginTop: 15 }}
+        ><b>Novo Paciente</b></Typography>
+        <Paper
+          style={paperStyle}>
+          <Grid container
+            direction="column"
+            spacing={2}>
+            <Grid item>
+              <TextField
+                label='Nome'
+                fullWidth
+                type="text"
+                required
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+              />
             </Grid>
-          </Paper>
-        </Grid>
+            <Grid item>
+              <TextField
+                label='Telefone'
+                fullWidth
+                type="text"
+                required
+                value={telefone}
+                onChange={(e) => setTelefone(e.target.value)}
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                label='Idade'
+                fullWidth
+                type="text"
+                required
+                value={idade}
+                onChange={(e) => setIdade(e.target.value)}
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                label='E-mail'
+                fullWidth
+                type="text"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                select
+                label='Origem'
+                fullWidth
+                value={origemId}
+                onChange={(e) => setOrigemId(e.target.value)}>
+                {origens.map((o) => (
+                  <MenuItem key={o._id} value={o._id}>
+                    {o.descricao}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item>
+              <Button
+                fullWidth
+                type="submit"
+                variant="contained"
+                startIcon={<AddRoundedIcon />}
+                sx={{ borderRadius: 3, color: 'white', backgroundColor: '#ff6900', '&:hover': { backgroundColor: '#670067 ' } }}
+              >Adicionar Paciente</Button>
+            </Grid>
+          </Grid>
+        </Paper>
       </form>
-    </Grid>
+    </>
   )
 }
 

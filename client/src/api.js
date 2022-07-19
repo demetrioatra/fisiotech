@@ -13,3 +13,8 @@ export const getOrigem = async () => {
 export const getPaciente = async () => {
     return api.get('/pacientes');
 }
+
+// paciente
+export const getPatologia = async () => {
+    return api.get('/patologias');
+}

@@ -11,8 +11,9 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'email', headerName: 'Email', width: 300 },
-  { field: 'password', headerName: 'Password', width: 380 },
+  { field: 'nome', headerName: 'Nome', width: 200},
+  { field: 'email', headerName: 'E-mail', width: 200},
+  { field: 'password', headerName: 'Senha', width: 200},
 ]
 
 // Component

@@ -24,7 +24,7 @@ export default function Plano() {
                     href = 'http://localhost:3000/plano/post'
                     size = "small"
                     startIcon = { <AddRoundedIcon /> }
-                    style={{borderRadius: 10}}
+                    sx = { { borderRadius: 4, color: 'white', backgroundColor: '#ff6900', '&:hover':{backgroundColor: '#670067 '} } }
                     >Novo Plano</Button>
                 </Grid>
             </Grid>

@@ -20,8 +20,16 @@ const PlanoController = {
 
     // Método readAll
     async getPlanos(req, res) {
+        const lookup = {
+            $lookup: {
+                from: 'pacientes',
+                localField: 'pacienteId',
+                foreignField: '_id',
+                as: 'paciente'
+            }
+        }
         try {
-            const planos = await Plano.find()
+            const planos = await Plano.aggregate([lookup])
             console.log('Planos listados com sucesso!')
             return res.status(200).json(planos)
         } catch (err) {

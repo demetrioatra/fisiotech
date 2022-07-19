@@ -11,42 +11,37 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'pacienteId', headerName: 'Paciente ID', width: 210, hide: true },
-  { field: 'nome', headerName: 'Nome', width: 200 },
-  { field: 'patologia', headerName: 'Patologia', width: 210 },
-  { field: 'atencao', headerName: 'Atenção', width: 210 },
-  {
-    field: 'ficha',
-    headerName: 'Fichas',
-    width: 150,
-    renderCell: (params) => (
-      <ul className='flex'>
-        {params.value.map((ficha, index) => (
-          <li key={index}>{ficha.roleName}</li>
-        ))}
-      </ul>
-    ),
-    type: 'string',
-  },
+  { field: 'id', headerName: 'Plano', hide: true },
+  { field: 'paciente', headerName: 'Paciente', width: 200 },
+  { field: 'patologia', headerName: 'Patologia', width: 200 },
+  { field: 'atencao', headerName: 'Atenção', width: 200 },
+  { field: 'qtd_sessoes', headerName: 'Sessões', width: 200 }
 ]
 
 // Component
 const PlanoTable = ({ onError }) => {
-  const [users, setUsers] = useState([]);
+  const [planos, setPlanos] = useState([]);
 
   useEffect(() => {
       fetch('http://localhost:3500/planos')
           .then((response) => response.json())
-          .then((json) => setUsers(json))
+          .then((json) => setPlanos(json))
           .catch(() => onError())
   }, [])
+
+  const rows = planos.map((pl) => {
+    return {
+      id: pl._id,
+      paciente: pl.paciente.map((pa) => pa.nome)
+    }
+  })
 
   return (
     <>
       <DataTable
-        rows = { users }
         columns = { columns }
-        loading = { !users.length }
+        rows = { rows }
+        loading = { !planos.length }
         sx = { positionStyles }
       />
     </>
