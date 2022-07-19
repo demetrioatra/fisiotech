@@ -14,17 +14,17 @@ export const getPaciente = async () => {
     return api.get('/pacientes');
 }
 
-// paciente
+// patologia
 export const getPatologia = async () => {
     return api.get('/patologias');
 }
 
-// paciente
+// countPatologias
 export const getDesafioPatologia = async () => {
     return api.get('/home/patologia')
 }
 
-// paciente
+// countOrigens
 export const getDesafioOrigem = async () => {
     return api.get('/home/origem');
 }

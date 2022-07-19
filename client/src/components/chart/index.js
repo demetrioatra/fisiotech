@@ -1,21 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
+  CardHeader,
   Paper
 } from '@mui/material'
 import ReactApexChart from 'react-apexcharts'
 
 class ApexChart extends React.Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
-      series: [1, 2, 2, 1],
+      series: [2, 1, 1, 1, 1, 1],
       options: {
         chart: {
-          width: 380,
-          type: 'pie',
+          width: 380
         },
-        labels: ['Hérnia de disco', 'Escoliose', 'Fraturas', 'Artrose'],
+        labels: ['Escoliose', 'Fraturas', 'Artrose', 'Luxações', 'Osteoporose', 'Dor ciática'],
         responsive: [{
           breakpoint: 480,
           options: {

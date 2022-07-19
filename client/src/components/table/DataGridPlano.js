@@ -17,10 +17,15 @@ const positionStyles = {
 // Variables
 const columns = [
   { field: 'id', headerName: 'Plano', hide: true },
-  { field: 'paciente', headerName: 'Paciente', width: 200 },
-  { field: 'patologia', headerName: 'Patologia', width: 200 },
-  { field: 'atencao', headerName: 'Atenção', width: 200 },
-  { field: 'qtd_sessoes', headerName: 'Sessões', width: 200 },
+  { field: 'paciente', headerName: 'Paciente', width: 150 },
+  { field: 'patologia', headerName: 'Patologia', width: 220 },
+  { field: 'atencao', headerName: 'Atenção', width: 100 },
+  { field: 'qtd_sessoes', headerName: 'Sessões', width: 100 },
+  { field: 'data', headerName: 'Data', width: 102 },
+  { field: 'hora', headerName: 'Hora', width: 75 },
+  { field: 'pago', headerName: 'Pago', width: 50 },
+  { field: 'compareceu', headerName: 'Compareceu', width: 75 },
+
   {
     field: 'actions', headerName: '', width: 70, renderCell: (plano) => (
       <>
@@ -48,8 +53,13 @@ const PlanoTable = ({ onError }) => {
     return {
       id: pl._id,
       paciente: pl.paciente.map((pa) => pa.nome),
+      patologia: pl.ficha.map((f) => f.patologiaId),
       atencao: pl.ficha.map((f) => f.atencao),
       qtd_sessoes: pl.ficha.map((f) => f.qtd_sessoes),
+      data: pl.ficha.map((f) => f.sessoes.map((s) => s.data)),
+      hora: pl.ficha.map((f) => f.sessoes.map((s) => s.hora)),
+      pago: pl.ficha.map((f) => f.sessoes.map((s) => s.pago) == true ? 'Não' : 'Sim'),
+      compareceu: pl.ficha.map((f) => f.sessoes.map((s) => s.compareceu) == true ? 'Não' : 'Sim'),
     }
   })
 
