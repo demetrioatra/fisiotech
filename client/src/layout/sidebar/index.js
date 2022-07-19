@@ -9,12 +9,10 @@ import {
     ListItemIcon
 } from '@mui/material'
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount'
-import WarningRoundedIcon from '@mui/icons-material/WarningRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import FolderCopyIcon from '@mui/icons-material/FolderCopy'
 import PieChartIcon from '@mui/icons-material/PieChart'
 import ArticleIcon from '@mui/icons-material/Article'
-import LoginIcon from '@mui/icons-material/Login'
 import SpaIcon from '@mui/icons-material/Spa'
 import './index.css'
 
@@ -64,21 +62,9 @@ export default function PermanentDrawerLeft() {
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding >
-                        <ListItemButton to = { '/doc' }>
+                        <ListItemButton href='http://localhost:3500/docs'>
                             <ListItemIcon style = { { color:'#670067' } }><ArticleIcon /></ListItemIcon>
                             <ListItemText style = { { color:'#670067' } }>Documentação</ListItemText>
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton to = { '/login' }>
-                            <ListItemIcon style = { { color:'#670067' } }><LoginIcon /></ListItemIcon>
-                            <ListItemText style = { { color:'#670067' } }>Login</ListItemText>
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton to = { '*' }>
-                            <ListItemIcon style = { { color:'#670067' } }><WarningRoundedIcon /></ListItemIcon>
-                            <ListItemText style = { { color:'#670067' } }>Not Found</ListItemText>
                         </ListItemButton>
                     </ListItem>
                 </List>

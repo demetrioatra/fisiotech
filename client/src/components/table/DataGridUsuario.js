@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import {
+  IconButton
+} from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete'
+import EditIcon from '@mui/icons-material/Edit'
 import DataTable from '../datatable/DataTable';
 
 // Styles
@@ -11,9 +16,20 @@ const positionStyles = {
 
 // Variables
 const columns = [
+  { field: '_id', hide: true},
   { field: 'nome', headerName: 'Nome', width: 200},
   { field: 'email', headerName: 'E-mail', width: 200},
-  { field: 'password', headerName: 'Senha', width: 200},
+  { field: 'password', headerName: 'Senha', width: 200, hide: true },
+  {
+    field: 'actions', headerName: '', width: 70, renderCell: (usuario) => (
+      <>
+        <IconButton>
+          <EditIcon />
+          <DeleteIcon />
+        </IconButton>
+      </>
+    )
+  }
 ]
 
 // Component

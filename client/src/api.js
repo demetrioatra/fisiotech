@@ -18,3 +18,13 @@ export const getPaciente = async () => {
 export const getPatologia = async () => {
     return api.get('/patologias');
 }
+
+// paciente
+export const getDesafioPatologia = async () => {
+    return api.get('/home/patologia')
+}
+
+// paciente
+export const getDesafioOrigem = async () => {
+    return api.get('/home/origem');
+}

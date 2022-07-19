@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './layout'
 import Dash from './pages/Dashboard'
-import Doc from './pages/Doc'
 import Paciente from './pages/Paciente'
 import Plano from './pages/Plano'
 import Usuario from './pages/Usuario'
@@ -21,10 +20,9 @@ export default function RoutesAp() {
                 <Route path = '/usuario' element = { <Usuario /> } />
                 <Route path = '/plano/post' element = { <PlanoPost /> } />
                 <Route path = '/paciente/post' element = { <PacientePost /> } />
-                <Route path = '/usuario/post' element = { <UsuarioPost /> } />
+                <Route path = '/usuario/post' element = { <UsuarioPost /> } /> 
             </Route>
             <Route path = '/login'  element = { <Login /> } />
-            <Route path = '/doc' element = { <Doc /> } />
             <Route path = '*' element = { <Error /> } />
         </Routes>
     )

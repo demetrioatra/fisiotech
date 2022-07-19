@@ -11,7 +11,8 @@ const { Router } = require('express')
 const routes = Router()
 
 // Rota para desafios
-routes.get('/', HomeController.countPatologias)
+routes.get('/home/patologia', HomeController.countPatologias)
+routes.get('/home/origem', HomeController.countOrigens)
 
 //Google Authenticate Oauth2
 require('dotenv').config()
