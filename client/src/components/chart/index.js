@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {
-  CardHeader,
   Paper
 } from '@mui/material'
 import ReactApexChart from 'react-apexcharts'

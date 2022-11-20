@@ -1,12 +1,12 @@
 header {
+    width: 100%;
+    height: 93px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    height: 94px;
-    background-color: #EFEFEF transparent;
+    justify-content: space-between;
 }
 
-.avatar {
-    cursor: pointer;
+.headerBox {
+    display: flex;
+    align-items: center;
 }

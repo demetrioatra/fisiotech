@@ -1,14 +1,16 @@
-// @mui
+import {
+  Box,
+  Card,
+  Paper,
+  Typography,
+  CardHeader,
+  CardContent
+} from '@mui/material';
 
-import { Box, Card, Paper, Typography, CardHeader, CardContent } from '@mui/material';
-// utils
-// ----------------------------------------------------------------------
-
-export default function AppTrafficBySite({ title, list, ...other }) {
+export default function AppTrafficBySite({title, list, ...other}) {
   return (
     <Card {...other}>
-      <CardHeader title={title}  />
-
+      <CardHeader title={title} />
       <CardContent>
         <Box
           sx={{
@@ -20,9 +22,7 @@ export default function AppTrafficBySite({ title, list, ...other }) {
           {list.map((site) => (
             <Paper key={site.name} variant="outlined" sx={{ py: 2.5, textAlign: 'center' }}>
               <Box sx={{ mb: 0.5 }}>{site.icon}</Box>
-
               <Typography variant="h6">{''}</Typography>
-
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                 {site.name}
               </Typography>
