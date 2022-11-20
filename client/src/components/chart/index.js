@@ -1,6 +1,8 @@
 import React from 'react'
 import {
-  Paper
+  Card,
+  CardHeader,
+  Typography
 } from '@mui/material'
 import ReactApexChart from 'react-apexcharts'
 
@@ -12,35 +14,26 @@ class ApexChart extends React.Component {
     this.state = {
       series: [2, 1, 1, 1, 1, 1],
       options: {
-        chart: {
-          width: 380
-        },
+        chart: {width: 380},
         labels: ['Escoliose', 'Fraturas', 'Artrose', 'Luxações', 'Osteoporose', 'Dor ciática'],
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }]
       },
     };
   }
 
   render() {
     return (
-      <Paper id = 'chart'>
+      <Card id='chart'>
+        <CardHeader title="Atendimento por patologia"/>
+
+        <Typography variant='h5'></Typography>
+        
         <ReactApexChart
-        options = { this.state.options }
-        series = { this.state.series }
-        type = 'pie'
-        width = { 420 }
-        height = { 400 }/>
-      </Paper>
+          options = { this.state.options }
+          series = { this.state.series }
+          type = 'pie'
+          width = { 420 }
+          height = { 400 }/>
+      </Card>
     )
   }
 }

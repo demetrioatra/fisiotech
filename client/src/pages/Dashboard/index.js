@@ -26,19 +26,19 @@ export default function Home() {
       <Grid container spacing={3} style={{marginTop: "2%"}}>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Primeiro indicador" total={1000} />
+          <Painel title="Primeiro indicador" total={3} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Segundo indicador" total={5500} />
+          <Painel title="Segundo indicador" total={15} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Terceiro indicador" total={13} />
+          <Painel title="Terceiro indicador" total={100} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Quarto indicador" total={1} />
+          <Painel title="Quarto indicador" total={3} />
         </Grid>
 
         <Grid item>
@@ -51,28 +51,21 @@ export default function Home() {
             list={[
               {
                 name: 'FaceBook',
-                value: 323234,
+                value: 323234
               },
               {
                 name: 'Google',
-                value: 341212,
+                value: 341212
               },
               {
                   name: 'Linkedin',
-                  value: 411213,
+                  value: 411213
                 },
                 {
                   name: 'Twitter',
-                  value: 443232,
+                  value: 443232
                 }
             ]}
-          />
-        </Grid>
-
-        <Grid item xs={12} md={6} lg={8}>
-          <Card
-            title='Tarefas'
-            list={[]}
           />
         </Grid>
       </Grid>
