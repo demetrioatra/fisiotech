@@ -1,10 +1,16 @@
-import { useEffect, useState } from 'react'
-import {Grid, Typography } from '@mui/material' 
+import {
+  useEffect,
+  useState
+} from 'react'
+import {
+  Grid,
+  Typography
+} from '@mui/material' 
 import { getDesafioPatologia } from '../../api'
+import { Helmet } from 'react-helmet'
 import Chart from '../../components/chart'
 import Card from '../../components/card'
 import Painel from '../../components/painel'
-
 
 export default function Home() {
 
@@ -19,6 +25,10 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Dashboard | Fisiotech</title>
+      </Helmet>
+
       <Typography variant="h5" style={{marginTop: 15}}>
           <b>Olá, bem vindo(a) de volta</b>
       </Typography>

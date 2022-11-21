@@ -3,12 +3,16 @@ import {
     Grid,
     Typography
 } from '@mui/material'
+import { Helmet } from 'react-helmet'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import DataGrid from '../../components/table/DataGridPaciente'
 
 export default function Paciente() {
     return (
         <div>
+            <Helmet>
+                <title>Pacientes | Fisiotech</title>
+            </Helmet>
             <Grid container
                 spacing={3}
                 direction="column">

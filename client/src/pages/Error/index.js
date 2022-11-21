@@ -3,6 +3,7 @@ import {
     Typography,
     Grid
 } from '@mui/material'
+import { Helmet } from 'react-helmet'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 
 const buttonStyle = {
@@ -15,6 +16,10 @@ const buttonStyle = {
 export default function Error() {
     return (
         <>
+            <Helmet>
+                <title>Página 404</title>
+            </Helmet>
+
             <Grid container
                 align="center"
                 spacing={2}

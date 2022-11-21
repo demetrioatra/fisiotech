@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react"
+import {
+  useEffect,
+  useState
+} from "react"
 import {
   Button,
   Grid,
@@ -7,8 +10,9 @@ import {
   TextField,
   Typography,
 } from "@mui/material"
-import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import { Helmet } from "react-helmet"
 import { getOrigem } from '../../api'
+import AddRoundedIcon from '@mui/icons-material/AddRounded'
 
 // Styles
 const paperStyle = {
@@ -50,6 +54,10 @@ const Paciente = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Cadastro | Fisiotech</title>
+      </Helmet>
+
       <form onSubmit={handleSubmit}>
         <Typography
           variant="h5"
