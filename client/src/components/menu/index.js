@@ -1,10 +1,14 @@
 import * as React from 'react'
+import {
+  Avatar,
+  Divider,
+  Typography
+} from '@mui/material'
+import { Container } from '@mui/system'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
-import { Avatar, Divider, Typography } from '@mui/material'
 import Menu from '@mui/material/Menu'
-import  pfp from '../../imgs/pfp.png'
-import {  Container } from '@mui/system'
+import pfp from '../../imgs/pfp.png'
 
 export default function PositionedMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -18,7 +22,7 @@ export default function PositionedMenu() {
   };
 
   return (
-    <div>
+    <>
       <Button
         id = "demo-positioned-button"
         aria-controls = { open ? 'demo-positioned-menu' : undefined }
@@ -50,6 +54,6 @@ export default function PositionedMenu() {
         <Divider />
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
-    </div>
+    </>
   )
 }

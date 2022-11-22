@@ -8,9 +8,9 @@ import {
 } from '@mui/material' 
 import { getDesafioPatologia } from '../../api'
 import { Helmet } from 'react-helmet'
+import Painel from '../../components/painel'
 import Chart from '../../components/chart'
 import Card from '../../components/card'
-import Painel from '../../components/painel'
 
 export default function Home() {
 
@@ -36,27 +36,27 @@ export default function Home() {
       <Grid container spacing={3} style={{marginTop: "2%"}}>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Primeiro indicador" total={3} />
+          <Painel title="Primeiro indicador" total={3} sx={{borderRadius: "10px"}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Segundo indicador" total={15} />
+          <Painel title="Segundo indicador" total={15} sx={{borderRadius: "10px"}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Terceiro indicador" total={100} />
+          <Painel title="Terceiro indicador" total={100} sx={{borderRadius: "10px"}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Quarto indicador" total={3} />
+          <Painel title="Quarto indicador" total={3} sx={{borderRadius: "10px"}} />
         </Grid>
 
         <Grid item>
-          <Chart/>
+          <Chart />
         </Grid>
 
         <Grid item xs={12} md={6} lg={4}>
-          <Card
+          <Card 
             title='Tráfego por site'
             list={[
               {
@@ -68,15 +68,16 @@ export default function Home() {
                 value: 341212
               },
               {
-                  name: 'Linkedin',
-                  value: 411213
-                },
+                name: 'Linkedin',
+                value: 411213
+              },
                 {
                   name: 'Twitter',
                   value: 443232
                 }
-            ]}
-          />
+              ]}
+            sx={{borderRadius: "10px"}}
+            />
         </Grid>
       </Grid>
     </>

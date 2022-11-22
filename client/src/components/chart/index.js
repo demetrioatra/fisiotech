@@ -22,7 +22,7 @@ class ApexChart extends React.Component {
 
   render() {
     return (
-      <Card id='chart'>
+      <Card id='chart' sx={{borderRadius: "10px"}}>
         <CardHeader title="Atendimento por patologia"/>
 
         <Typography variant='h5'></Typography>
