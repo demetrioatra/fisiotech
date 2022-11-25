@@ -44,24 +44,30 @@ export default function Login() {
                         </Grid>
                         <Grid item>
                             <Button
-                            variant = 'contained'
-                            href = 'http://localhost:3000/dashboard'
-                            sx = { { color: 'white', backgroundColor: '#ff6900', '&:hover':{backgroundColor: '#670067 '} } }
-                            fullWidth
-                        >Sign In</Button>
+                                variant='contained'
+                                href='http://localhost:3000/dashboard'
+                                fullWidth
+                                sx={{color:'white',
+                                    backgroundColor:'#ff6900',
+                                    '&:hover':{backgroundColor:'#670067'}
+                                }}
+                            >Sign In</Button>
                         </Grid>
                         <Grid item color = "#ff6900"><p>OR</p></Grid>
                         <Grid item>
                             <Button
-                            variant = 'contained'
-                            startIcon = { <GoogleIcon /> }
-                            href = 'http://localhost:3500/auth/google'
-                            sx = { { color: 'white', backgroundColor: '#ff6900', '&:hover':{backgroundColor: '#670067 '} } }
-                            fullWidth
+                                variant='contained'
+                                startIcon={<GoogleIcon />}
+                                href='http://localhost:3500/auth/google'
+                                fullWidth
+                                sx={{color:'white',
+                                    backgroundColor:'#ff6900',
+                                    '&:hover':{backgroundColor:'#670067'}
+                                }}
                             >Google</Button>
                         </Grid>
                     </Grid>
-                    <img src = { lobtec }/>
+                    <img src={ lobtec }/>
                 </Paper>
             </Grid>
         </Grid>

@@ -29,9 +29,7 @@ export default function PositionedMenu() {
         aria-haspopup = "true"
         aria-expanded = { open ? 'true' : undefined }
         onClick = { handleClick }
-      >
-        <Avatar className="avatar" src={pfp} />
-      </Button>
+      ><Avatar className="avatar" src={pfp} sx={{width:"35px", height:"35px"}} /></Button>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"

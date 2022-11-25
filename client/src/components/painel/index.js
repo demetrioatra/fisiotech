@@ -13,6 +13,7 @@ Painel.propTypes = {
 export default function Painel({title, total, sx, ...other}) {
     return (
         <Card
+            variant='outlined'
             sx={{
                 py: 4,
                 textAlign: 'center',

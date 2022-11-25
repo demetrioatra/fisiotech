@@ -9,7 +9,7 @@ import {
 import { getDesafioPatologia } from '../../api'
 import { Helmet } from 'react-helmet'
 import Painel from '../../components/painel'
-import Chart from '../../components/chart'
+import Grafico from '../../components/grafico'
 import Card from '../../components/card'
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
         </Grid>
 
         <Grid item>
-          <Chart />
+          <Grafico />
         </Grid>
 
         <Grid item xs={12} md={6} lg={4}>

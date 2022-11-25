@@ -6,9 +6,9 @@ import Header from './header'
 
 export default function layout() {
     return (
-        <Stack direction = 'row'>
+        <Stack direction='row'>
             <Sidebar />
-            <Container direction = 'column'>
+            <Container direction='column'>
                 <Header/>
                 <Outlet />
             </Container>

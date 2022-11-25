@@ -4,13 +4,11 @@ import {
     Grid
 } from '@mui/material'
 import { Helmet } from 'react-helmet'
-import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 
 const buttonStyle = {
-    color: 'white',
-    backgroundColor:
-        '#ff6900',
-    '&:hover': { backgroundColor: '#670067' }
+    color:'white',
+    backgroundColor:'#ff6900',
+    '&:hover':{backgroundColor:'#670067'}
 }
 
 export default function Error() {
@@ -22,26 +20,25 @@ export default function Error() {
 
             <Grid container
                 align="center"
-                spacing={2}
+                spacing={3}
                 direction="column">
+
                 <Grid item
-                    style={{ marginTop: 40 }}>
+                    style={{marginTop:80}}>
                     <Typography
                         variant='h4'
                         marginTop={22}
-                        color="#ff6900">
-                        <ReportProblemIcon
-                            fontSize='lg'
-                        />| Esta página não pode ser encontrada.</Typography>
+                        color="#ff6900"
+                    >Esta página não pode ser encontrada.</Typography>
                 </Grid>
+
                 <Grid item>
                     <Button
                         variant='contained'
                         href='/dashboard'
                         size='large'
-                        fontSize='large'
                         sx={buttonStyle}
-                    >Home</Button>
+                    >Página Principal</Button>
                 </Grid>
             </Grid>
         </>

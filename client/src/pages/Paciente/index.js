@@ -5,7 +5,7 @@ import {
 } from '@mui/material'
 import { Helmet } from 'react-helmet'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
-import DataGrid from '../../components/table/DataGridPaciente'
+import DataGrid from '../../components/grid/DataGridPaciente'
 
 export default function Paciente() {
     return (
@@ -27,9 +27,15 @@ export default function Paciente() {
                         <Button
                             href='http://localhost:3000/paciente/post'
                             variant="contained"
-                            size="small"
                             startIcon={<AddRoundedIcon />}
-                            sx={{borderRadius: 4, color: 'white', backgroundColor: '#ff6900', '&:hover':{backgroundColor: '#670067 '}}}
+                            sx={{
+                                marginRight:"15px",
+                                height:"40px",
+                                borderRadius:4,
+                                color:'white',
+                                backgroundColor:'#ff6900',
+                                '&:hover':{backgroundColor:'#670067'}
+                            }}
                         >Novo Paciente</Button>
                     </Grid>
                 </Grid>

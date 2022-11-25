@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import {
   IconButton
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
-import DataTable from '../datatable/DataTable';
+import DataTable from '../datatable/DataTable'
 
 // Styles
 const positionStyles = {
-  width: '74%',
+  width: '75.4%',
   height: '440px',
   position: 'absolute',
   borderRadius: 4
@@ -27,7 +27,7 @@ const columns = [
   { field: 'compareceu', headerName: 'Compareceu', width: 75 },
 
   {
-    field: 'actions', headerName: '', width: 70, renderCell: (plano) => (
+    field: 'actions', headerName: '', width: 70, renderCell: () => (
       <>
         <IconButton>
           <EditIcon />
@@ -40,7 +40,7 @@ const columns = [
 
 // Component
 const PlanoTable = ({ onError }) => {
-  const [planos, setPlanos] = useState([]);
+  const [planos, setPlanos] = useState([])
 
   useEffect(() => {
       fetch('http://localhost:3500/planos')

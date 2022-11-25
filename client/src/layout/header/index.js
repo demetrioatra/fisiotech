@@ -1,18 +1,21 @@
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 import Menu from '../../components/menu'
-import './index.css'
 
-function Header() {
+export default function Header() {
     return (
-        <header>
+        <header style={{
+            width: "100%",
+            height: "93px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+        }}>
             <SearchIcon style={{color:'#ff6900'}} />
-            <div className='headerBox'>
+            <div style={{display:"flex", alignItems:"center"}}>
                 <NotificationsIcon style={{color:'#ff6900'}} />
                 <Menu />
             </div>
         </header>
     )
 }
-
-export default Header;

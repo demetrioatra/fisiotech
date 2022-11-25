@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import {
   IconButton
 } from '@mui/material';
@@ -8,7 +8,7 @@ import DataTable from '../datatable/DataTable';
 
 // Styles
 const positionStyles = {
-  width: '74%',
+  width: '75.4%',
   height: '440px',
   position: 'absolute',
   borderRadius: 4
@@ -21,7 +21,7 @@ const columns = [
   { field: 'email', headerName: 'E-mail', width: 200},
   { field: 'password', headerName: 'Senha', width: 200, hide: true },
   {
-    field: 'actions', headerName: '', width: 70, renderCell: (usuario) => (
+    field: 'actions', headerName: '', width: 70, renderCell: () => (
       <>
         <IconButton>
           <EditIcon />

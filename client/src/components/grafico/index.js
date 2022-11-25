@@ -24,8 +24,6 @@ class ApexChart extends React.Component {
     return (
       <Card id='chart' sx={{borderRadius: "10px"}}>
         <CardHeader title="Atendimento por patologia"/>
-
-        <Typography variant='h5'></Typography>
         
         <ReactApexChart
           options = { this.state.options }

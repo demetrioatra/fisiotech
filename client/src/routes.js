@@ -16,17 +16,17 @@ import PacientePost from './pages/Paciente/pacientePost'
 export default function RoutesAp() {
     return (
         <Routes>
-            <Route path = '/' element = { <Layout /> } >
-                <Route path = '/dashboard' element = { <Dash /> } />
-                <Route path = '/paciente' element = { <Paciente /> } />
-                <Route path = '/plano' element = { <Plano /> } />
-                <Route path = '/usuario' element = { <Usuario /> } />
-                <Route path = '/plano/post' element = { <PlanoPost /> } />
-                <Route path = '/paciente/post' element = { <PacientePost /> } />
-                <Route path = '/usuario/post' element = { <UsuarioPost /> } /> 
+            <Route path='/' element={<Layout />}>
+                <Route path='/dashboard' element={<Dash />}/>
+                <Route path='/paciente' element={<Paciente />}/>
+                <Route path='/plano' element={<Plano />}/>
+                <Route path='/usuario' element={<Usuario />}/>
+                <Route path='/plano/post' element={<PlanoPost />}/>
+                <Route path='/paciente/post' element={<PacientePost />}/>
+                <Route path='/usuario/post' element={<UsuarioPost />}/> 
             </Route>
-            <Route path = '/login'  element = { <Login /> } />
-            <Route path = '*' element = { <Error /> } />
+            <Route path='/login' element={<Login />}/>
+            <Route path='*' element={<Error />}/>
         </Routes>
     )
 }
