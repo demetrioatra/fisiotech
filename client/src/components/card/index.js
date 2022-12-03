@@ -28,16 +28,16 @@ export default function AppTrafficBySite({title, list, ...other}) {
         >
           {list.map((site) => (
             <Paper key={site.name}
-              variant="outlined"
+              variant='outlined'
               sx={{
                 py: 2.5,
                 textAlign: 'center'
               }}
             >
 
-            <Typography variant="h6">{site.value}</Typography>
+            <Typography variant='h6'>{site.value}</Typography>
 
-            <Typography variant="body2" 
+            <Typography variant='body2' 
               sx={{color: 'text.secondary'}}>
               {site.name}
             </Typography>

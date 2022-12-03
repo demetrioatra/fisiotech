@@ -8,7 +8,7 @@ import DataTable from '../datatable/DataTable'
 
 // Styles
 const positionStyles = {
-  width: '75.4%',
+  width: '73.3%',
   height: '440px',
   position: 'absolute',
   borderRadius: 4
@@ -16,21 +16,22 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'id', headerName: 'Plano', hide: true },
-  { field: 'paciente', headerName: 'Paciente', width: 150 },
-  { field: 'patologia', headerName: 'Patologia', width: 220 },
-  { field: 'atencao', headerName: 'Atenção', width: 100 },
-  { field: 'qtd_sessoes', headerName: 'Sessões', width: 100 },
-  { field: 'data', headerName: 'Data', width: 102 },
-  { field: 'hora', headerName: 'Hora', width: 75 },
-  { field: 'pago', headerName: 'Pago', width: 50 },
-  { field: 'compareceu', headerName: 'Compareceu', width: 75 },
-
-  {
-    field: 'actions', headerName: '', width: 70, renderCell: () => (
+  { field: 'id',          hide: true },
+  { field: 'paciente',    headerName: 'Paciente',   width: 150 },
+  { field: 'patologia',   headerName: 'Patologia',  width: 220 },
+  { field: 'atencao',     headerName: 'Atenção',    width: 100 },
+  { field: 'qtd_sessoes', headerName: 'Sessões',    width: 100 },
+  { field: 'data',        headerName: 'Data',       width: 102 },
+  { field: 'hora',        headerName: 'Hora',       width: 75 },
+  { field: 'pago',        headerName: 'Pago',       width: 50 },
+  { field: 'compareceu',  headerName: 'Compareceu', width: 75 },
+  { field: 'actions',     width: 100,
+    renderCell: () => (
       <>
         <IconButton>
           <EditIcon />
+        </IconButton>
+        <IconButton>
           <DeleteIcon />
         </IconButton>
       </>

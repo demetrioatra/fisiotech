@@ -15,22 +15,20 @@ export default function Paciente() {
             </Helmet>
             <Grid container
                 spacing={3}
-                direction="column">
+                direction='column'
+                sx={{marginTop:'1px'}}>
                 <Grid item>
                     <Grid container
-                        direction="row"
-                        style={{justifyContent: "space-between"}}>
-                        <Typography
-                            variant="h5"
-                            style={{marginTop: 15}}
-                        ><b>Pacientes</b></Typography>
+                        direction='row'
+                        style={{alignItems:'center', justifyContent:'space-between'}}>
+                        <Typography variant='h5'><b>Pacientes</b></Typography>
                         <Button
                             href='http://localhost:3000/paciente/post'
-                            variant="contained"
+                            variant='contained'
                             startIcon={<AddRoundedIcon />}
                             sx={{
-                                marginRight:"15px",
-                                height:"40px",
+                                marginRight:'15px',
+                                height:'36px',
                                 borderRadius:4,
                                 color:'white',
                                 backgroundColor:'#ff6900',
@@ -39,7 +37,8 @@ export default function Paciente() {
                         >Novo Paciente</Button>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item
+                    sx={{marginTop:'20px'}}>
                     <DataGrid />
                 </Grid>
             </Grid>

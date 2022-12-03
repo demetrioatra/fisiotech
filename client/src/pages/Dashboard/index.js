@@ -6,15 +6,15 @@ import {
   Grid,
   Typography
 } from '@mui/material' 
-import { getDesafioPatologia } from '../../api'
 import { Helmet } from 'react-helmet'
+import { getDesafioPatologia } from '../../api'
+import Card from '../../components/card'
 import Painel from '../../components/painel'
 import Grafico from '../../components/grafico'
-import Card from '../../components/card'
 
 export default function Home() {
 
-  const [contPat, setContPat] = useState([])
+  const [setContPat] = useState([])
 
   useEffect(() => {
     (async () => {
@@ -29,35 +29,36 @@ export default function Home() {
         <title>Dashboard | Fisiotech</title>
       </Helmet>
 
-      <Typography variant="h5" style={{marginTop: 15}}>
+      <Typography variant='h5' style={{marginTop: 15}}>
           <b>Olá, bem vindo(a) de volta</b>
       </Typography>
 
-      <Grid container spacing={3} style={{marginTop: "2%"}}>
+      <Grid container spacing={3} style={{marginTop: '2%'}}>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Primeiro indicador" total={3} sx={{borderRadius: "10px"}} />
+          <Painel title='Primeiro indicador' total={3} sx={{borderRadius: '10px'}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Segundo indicador" total={15} sx={{borderRadius: "10px"}} />
+          <Painel title='Segundo indicador' total={15} sx={{borderRadius: '10px'}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Terceiro indicador" total={100} sx={{borderRadius: "10px"}} />
+          <Painel title='Terceiro indicador' total={100} sx={{borderRadius: '10px'}} />
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Painel title="Quarto indicador" total={3} sx={{borderRadius: "10px"}} />
+          <Painel title='Quarto indicador' total={3} sx={{borderRadius: '10px'}} />
         </Grid>
 
         <Grid item>
           <Grafico />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={6}>
           <Card 
             title='Tráfego por site'
+            sx={{borderRadius: '10px'}}
             list={[
               {
                 name: 'FaceBook',
@@ -71,12 +72,11 @@ export default function Home() {
                 name: 'Linkedin',
                 value: 411213
               },
-                {
-                  name: 'Twitter',
-                  value: 443232
-                }
+              {
+                name: 'Twitter',
+                value: 443232
+              }
               ]}
-            sx={{borderRadius: "10px"}}
             />
         </Grid>
       </Grid>

@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 const opts = { toJSON: { virtuals: true } };
 
-
 // Schema do paciente
 const Schema = new mongoose.Schema ({
     nome: String,
     telefone: String,
-    idade: String,
+    dataNascimento: Date,
     email: String,
     origemId: {
       type: mongoose.Schema.Types.ObjectId

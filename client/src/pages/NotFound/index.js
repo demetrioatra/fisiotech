@@ -4,6 +4,7 @@ import {
     Grid
 } from '@mui/material'
 import { Helmet } from 'react-helmet'
+import SpaIcon from '@mui/icons-material/Spa'
 
 const buttonStyle = {
     color:'white',
@@ -19,16 +20,25 @@ export default function Error() {
             </Helmet>
 
             <Grid container
-                align="center"
+                align='center'
                 spacing={3}
-                direction="column">
+                direction='column'>
 
                 <Grid item
-                    style={{marginTop:80}}>
+                    sx={{
+
+                        color:'#ff6900',
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                    }}>
+                    <SpaIcon fontSize='large' /> 
+                </Grid>
+
+                <Grid item
+                    style={{marginTop:140}}>
                     <Typography
                         variant='h4'
-                        marginTop={22}
-                        color="#ff6900"
+                        color='#ff6900'
                     >Esta página não pode ser encontrada.</Typography>
                 </Grid>
 

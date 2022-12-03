@@ -15,34 +15,33 @@ export default function Plano() {
             </Helmet>
 
             <Grid container
-            spacing = { 3 }
-            direction = "column">
+                spacing={3}
+                direction='column'
+                sx={{marginTop:'1px'}}>
                 <Grid item>
                     <Grid container
-                        direction="row"
-                        style={{justifyContent:"space-between"}}>
-                            <Typography
-                            variant = "h5"
-                            style = { { marginTop: 15 } }
-                            ><b>Planos</b></Typography>
-                            <Button
-                                variant="contained"
-                                href='http://localhost:3000/plano/post'
-                                size="small"
-                                startIcon={<AddRoundedIcon />}
-                                sx={{
-                                    marginRight:"15px",
-                                    height: "40px",
-                                    borderRadius:4,
-                                    color:'white',
-                                    backgroundColor:'#ff6900',
-                                    '&:hover':{backgroundColor:'#670067'}
-                                }}
-                            >Novo Plano</Button>
+                        direction='row'
+                        style={{alignItems:'center', justifyContent:'space-between'}}>
+                        <Typography variant='h5'><b>Planos</b></Typography>
+                        <Button
+                            variant='contained'
+                            href='http://localhost:3000/plano/post'
+                            size='small'
+                            startIcon={<AddRoundedIcon />}
+                            sx={{
+                                marginRight:'15px',
+                                height: '38px',
+                                borderRadius:4,
+                                color:'white',
+                                backgroundColor:'#ff6900',
+                                '&:hover':{backgroundColor:'#670067'}
+                            }}
+                        >Novo Plano</Button>
                     </Grid>
                 </Grid>
 
-                <Grid item>
+                <Grid item
+                    sx={{marginTop:'20px'}}>
                     <DataGrid />
                 </Grid>
             </Grid>

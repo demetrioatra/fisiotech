@@ -6,7 +6,8 @@ const opts = { toJSON: { virtuals: true } };
 const Schema = new mongoose.Schema ({
     nome: String,
     email: String,
-    password: String
+    password: String,
+    status: String
 }, opts)
 
 // Export do schema de usuário

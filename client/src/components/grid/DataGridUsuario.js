@@ -8,7 +8,7 @@ import DataTable from '../datatable/DataTable';
 
 // Styles
 const positionStyles = {
-  width: '75.4%',
+  width: '73.3%',
   height: '440px',
   position: 'absolute',
   borderRadius: 4
@@ -16,15 +16,18 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: '_id', hide: true},
-  { field: 'nome', headerName: 'Nome', width: 200},
-  { field: 'email', headerName: 'E-mail', width: 200},
-  { field: 'password', headerName: 'Senha', width: 200, hide: true },
-  {
-    field: 'actions', headerName: '', width: 70, renderCell: () => (
+  { field: '_id',       hide: true },
+  { field: 'nome',      headerName: 'Nome',   width: 200 },
+  { field: 'email',     headerName: 'E-mail', width: 200 },
+  { field: 'status',    headerName: 'Status', width: 100 },
+  { field: 'password',  headerName: 'Senha',  hide: true },
+  { field: 'actions',   width: 100,
+    renderCell: () => (
       <>
         <IconButton>
           <EditIcon />
+        </IconButton>
+        <IconButton>
           <DeleteIcon />
         </IconButton>
       </>

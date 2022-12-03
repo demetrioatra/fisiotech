@@ -49,9 +49,9 @@ startServer()
 // Faz a conexão com o banco de dados MongoDB
 async function connection () {
     try {
-        mongoose.connect
-            (process.env.DB_FISIOTECH, { useNewUrlParser: true, useUnifiedTopology: true })
-        console.log('Conexão com mongodb realizada com sucesso!')
+        mongoose.connect(
+            process.env.DB_FISIOTECH, { useNewUrlParser: true, useUnifiedTopology: true }
+        ).then(() => console.log('Conexão com mongodb realizada com sucesso!'))
     } catch (err) {
         console.log('Falha ao realizar conexão com mongodb...')
         console.log(err)

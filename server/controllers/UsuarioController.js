@@ -6,10 +6,10 @@ const UsuarioController = {
     // Método create
     async createUsuario(req, res) {
         // Guarda o corpo da requisição
-        const { nome, email, password } = req.body
+        const { nome, email, password, status } = req.body
 
         try {
-            const usuario = await Usuario.create({ nome, email, password })
+            const usuario = await Usuario.create({ nome, email, password, status })
             console.log('Usuário criado com sucesso!')
             return res.status(200).json(usuario)
         } catch (err) {

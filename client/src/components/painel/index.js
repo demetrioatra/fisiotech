@@ -17,13 +17,14 @@ export default function Painel({title, total, sx, ...other}) {
             sx={{
                 py: 4,
                 textAlign: 'center',
+                width: '198px',
                 ...sx,
             }}
             {...other}>
 
-            <Typography variant="h3">{total}</Typography>
+            <Typography variant='h3'>{total}</Typography>
 
-            <Typography variant="subtitle2">
+            <Typography variant='subtitle2'>
                 {title}
             </Typography>
         </Card>

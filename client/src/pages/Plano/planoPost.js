@@ -1,7 +1,7 @@
 import {
   useState,
   useEffect
-} from "react"
+} from 'react'
 import {
   Button,
   Grid,
@@ -9,7 +9,7 @@ import {
   Paper,
   TextField,
   Typography
-} from "@mui/material"
+} from '@mui/material'
 import { Helmet } from 'react-helmet'
 import { getPaciente, getPatologia } from '../../api'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
@@ -45,7 +45,7 @@ const Paciente = () => {
 
     fetch('http://localhost:3500/planos', {
       method: 'POST',
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(plano)
     }).then(() => {
       console.log('Novo paciente adicionado!')
@@ -62,20 +62,20 @@ const Paciente = () => {
 
       <form onSubmit={handleSubmit}>
         <Typography
-          variant="h5"
+          variant='h5'
           style={{ marginTop: 15 }}
         ><b>Novo plano</b></Typography>
         <Paper
           style={paperStyle}>
           <Grid container
-            direction="column"
+            direction='column'
             spacing={2}>
             <Grid item>
               <TextField
                 select
                 label='Paciente'
                 fullWidth
-                type="text"
+                type='text'
                 required
                 value={pacienteId}
                 onChange={(e) => setPacienteId(e.target.value)}
@@ -92,7 +92,7 @@ const Paciente = () => {
                 label='Patologia'
                 select
                 fullWidth
-                type="text"
+                type='text'
                 required
                 value={patologiaId}
                 onChange={(e) => setPatologiaId(e.target.value)}
@@ -108,7 +108,7 @@ const Paciente = () => {
               <TextField
                 label='Atenção'
                 fullWidth
-                type="text"
+                type='text'
                 required
                 value={atencao}
                 onChange={(e) => setAtencao(e.target.value)}
@@ -118,7 +118,7 @@ const Paciente = () => {
               <TextField
                 label='Qtd. de sessões'
                 fullWidth
-                type="text"
+                type='text'
                 required
                 value={qtd_sessoes}
                 onChange={(e) => setQtdSessoes(e.target.value)}
@@ -127,8 +127,8 @@ const Paciente = () => {
             <Grid item>
               <Button
                 fullWidth
-                type="submit"
-                variant="contained"
+                type='submit'
+                variant='contained'
                 startIcon={<AddRoundedIcon />}
                 sx={{ borderRadius: 3, color: 'white', backgroundColor: '#ff6900', '&:hover': { backgroundColor: '#670067 ' } }}
               >Adicionar Plano</Button>

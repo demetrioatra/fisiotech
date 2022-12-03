@@ -19,12 +19,12 @@ const paperStyle = {
 
 export default function Login() {
     return (
-        <Grid align = "center">
+        <Grid align = 'center'>
             <Grid item>
                 <Typography
                 variant = 'h4'
                 marginTop = { 4 }
-                color = "#ff6900"
+                color = '#ff6900'
                 ><SpaIcon fontSize = 'lg' className = 'icon' /> Fisiotech</Typography>
             </Grid>
             <Grid className = 'grid'>
@@ -35,12 +35,12 @@ export default function Login() {
                     variant = 'h4'
                     style = { {color: '#ff6900' } }
                     >Sign in to continue</Typography>
-                    <Grid container spacing = { 2 } direction = "column" style = { { marginTop: 20 } }>
+                    <Grid container spacing = { 2 } direction = 'column' style = { { marginTop: 20 } }>
                         <Grid item>
-                            <TextField label = "E-mail" fullWidth required/>
+                            <TextField label = 'E-mail' fullWidth required/>
                         </Grid>
                         <Grid item>
-                            <TextField label = "Password" fullWidth required/>
+                            <TextField label = 'Password' fullWidth required/>
                         </Grid>
                         <Grid item>
                             <Button
@@ -53,7 +53,7 @@ export default function Login() {
                                 }}
                             >Sign In</Button>
                         </Grid>
-                        <Grid item color = "#ff6900"><p>OR</p></Grid>
+                        <Grid item color = '#ff6900'><p>OR</p></Grid>
                         <Grid item>
                             <Button
                                 variant='contained'

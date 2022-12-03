@@ -16,23 +16,21 @@ export default function Usuario() {
 
             <Grid container
                 spacing={3}
-                direction="column">
+                direction='column'
+                sx={{marginTop:'1px'}}>
                 <Grid item>
                     <Grid container
-                        direction="row"
-                        style={{justifyContent:"space-between"}}>
-                        <Typography
-                            variant="h5"
-                            style={{marginTop:15}}
-                        ><b>Usuários</b></Typography>
+                        direction='row'
+                        style={{alignItems:'center', justifyContent:'space-between'}}>
+                        <Typography variant='h5'><b>Usuários</b></Typography>
                         <Button
                             href='http://localhost:3000/usuario/post'
-                            variant="contained"
-                            size="small"
+                            variant='contained'
+                            size='small'
                             startIcon={<AddRoundedIcon />}
                             sx={{
-                                marginRight:"15px",
-                                height:"40px",
+                                marginRight:'15px',
+                                height:'36px',
                                 borderRadius:4,
                                 color:'white',
                                 backgroundColor:'#ff6900',
@@ -41,7 +39,8 @@ export default function Usuario() {
                         >Novo Usuário</Button>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item
+                    sx={{marginTop:'20px'}}>
                     <DataGrid />
                 </Grid>
             </Grid>

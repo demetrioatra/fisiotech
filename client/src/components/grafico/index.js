@@ -22,8 +22,8 @@ class ApexChart extends React.Component {
 
   render() {
     return (
-      <Card id='chart' sx={{borderRadius: "10px"}}>
-        <CardHeader title="Atendimento por patologia"/>
+      <Card id='chart' sx={{borderRadius: '10px'}}>
+        <CardHeader title='Atendimento por patologia'/>
         
         <ReactApexChart
           options = { this.state.options }

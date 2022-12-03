@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react'
 import {
-  IconButton
-} from '@mui/material';
+  useState,
+  useEffect
+} from 'react'
+import { IconButton } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import DataTable from '../datatable/DataTable'
 
 // Styles
 const positionStyles = {
-  width: '75.4%',
+  width: '73.3%',
   height: '440px',
   position: 'absolute',
   borderRadius: 4
@@ -16,17 +17,19 @@ const positionStyles = {
 
 // Variables
 const columns = [
-  { field: 'id', headerName: 'Paciente', hide: true },
-  { field: 'nome', headerName: 'Nome', width: 150 },
-  { field: 'telefone', headerName: 'Telefone', width: 120 },
-  { field: 'idade', headerName: 'Data Nascimento', width: 120 },
-  { field: 'email', headerName: 'E-mail', width: 200 },
-  { field: 'origem', headerName: 'Origem', width: 230 },
-  {
-    field: 'actions', headerName: '', width: 70, renderCell: () => (
+  { field: 'id',              hide: true },
+  { field: 'nome',            headerName: 'Nome',             width: 150 },
+  { field: 'telefone',        headerName: 'Telefone',         width: 120 },
+  { field: 'dataNascimento',  headerName: 'Nascimento',       width: 109 },
+  { field: 'email',           headerName: 'E-mail',           width: 200 },
+  { field: 'origem',          headerName: 'Origem',           width: 200 },
+  { field: 'actions',         width: 99,
+    renderCell: () => (
       <>
         <IconButton>
           <EditIcon />
+        </IconButton>
+        <IconButton>
           <DeleteIcon />
         </IconButton>
       </>
@@ -50,7 +53,7 @@ const PacienteTable = ({ onError }) => {
       id: p._id,
       nome: p.nome,
       telefone: p.telefone,
-      idade: p.idade,
+      dataNascimento: p.dataNascimento,
       email: p.email,
       origem: p.origem.map((o) => o.descricao)
     }

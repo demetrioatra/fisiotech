@@ -5,10 +5,10 @@ import {
 import Layout from './layout'
 import Plano from './pages/Plano'
 import Login from './pages/Login'
-import Error from './pages/Error'
 import Dash from './pages/Dashboard'
 import Usuario from './pages/Usuario'
 import Paciente from './pages/Paciente'
+import NotFound from './pages/NotFound'
 import PlanoPost from './pages/Plano/planoPost'
 import UsuarioPost from './pages/Usuario/usuarioPost'
 import PacientePost from './pages/Paciente/pacientePost'
@@ -26,7 +26,7 @@ export default function RoutesAp() {
                 <Route path='/usuario/post' element={<UsuarioPost />}/> 
             </Route>
             <Route path='/login' element={<Login />}/>
-            <Route path='*' element={<Error />}/>
+            <Route path='*' element={<NotFound />}/>
         </Routes>
     )
 }
